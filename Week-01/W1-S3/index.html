@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <h1 id="title">
+        Avion School Survey Form
+    </h1>
+    <p id="description">
+        Thank you for taking the time to help us improve our platform
+    </p>
+
+    <form id="survey-form">
+        <!-- Name -->
+        <label for="name" id="name-label">Name</label><br>
+        <input type="text" name="name" id="name" placeholder="Enter your name" required>
+
+        <br>
+        <br>
+
+        <!-- Email -->
+        <label for="email" id="email-label">Email</label><br>
+        <input type="email" name="email" id="email" placeholder="Enter your Email" required>
+
+        <br>
+        <br>
+
+        <!-- Age --> 
+        <label for="number" id="number-level">Age <small>(optional)</small></label><br>
+        <!-- <input type="text" pattern="\d{2}" title="Numeric" name="age" id="number" placeholder="Age">--> <!-- STORY #8 with range: 10-99 -->
+        <input type="number" name="age" id="number" placeholder="Age" min="0" max="100"> <!-- STORY #9, but doesn't fulfill STORY #8-->
+
+        <br>
+        <br>
+
+        <!-- Dropdown: Current Role -->
+        <label for="dropdown">Which option best describes your current role?</label><br>
+        <select name="dropdown" id="dropdown">
+            <option value="" disabled selected hidden>Select current role</option>
+            <option value="">Lorem, ipsum dolor.</option> <!-- EDIT-->
+            <option value="">Lorem ipsum dolor sit.</option> <!-- EDIT-->
+        </select>
+
+        <br>
+        <br>
+
+        <!-- Radio Button: Recommendation -->
+        <label for="choices" id="choices">Would you recommend Avion School to a friend?</label><br>
+            <!-- Definitely -->
+            <input type="radio" name="recommend" id="definitely" value="def">
+            <label for="definitely">Definitely</label>
+            <br>
+            <!-- Maybe -->
+            <input type="radio" name="recommend" id="maybe" value="myb">
+            <label for="maybe">Maybe</label>
+            <br>
+            <!-- Not Sure -->
+            <input type="radio" name="recommend" id="notSure" value="ns">
+            <label for="notSure">Not Sure</label>
+        
+        <br>
+        <br>
+        
+        <!-- Dropdown: Favorite Feature -->
+        <label for="feature">What is your favorite feature of Avion School?</label><br>
+        <select name="feature" id="feature">
+            <option value="" disabled selected hidden>Select an option</option>
+            <option value="">Lorem, ipsum dolor.</option> <!-- EDIT-->
+            <option value="">Lorem ipsum dolor sit.</option> <!-- EDIT-->
+        </select>
+ 
+        <br>
+        <br>
+
+        <!-- Checklist -->
+        <label for="improve" id="improve">What would you like to see improved? <small>(Check all that apply)</small></label><br>
+            <!-- Front-end Projects-->
+            <input type="checkbox" name="frontEnd" id="frontEnd" value="frontEnd">
+            <label for="frontEnd">Front-end Projects</label>
+            <br>
+            <!-- Back-end Projects -->
+            <input type="checkbox" name="backEnd" id="backEnd" value="backEnd">
+            <label for="backEnd">Back-end Projects</label>
+            <br>
+            <!-- Data Visualization -->
+            <input type="checkbox" name="dataVisual" id="dataVisual" value="dataVisual">
+            <label for="dataVisual">Data Visualization</label>
+            <br>
+            <!-- Challenges -->
+            <input type="checkbox" name="challenges" id="challenges" value="challenges">
+            <label for="challenges">Challenges</label>
+            <br>
+            <!-- Open Source Community -->
+            <input type="checkbox" name="openSource" id="openSource" value="openSource">
+            <label for="openSource">Open Source Community</label>
+            <br>
+            <!-- Gitter help rooms -->
+            <input type="checkbox" name="gitterHelp" id="gitterHelp" value="gitterHelp">
+            <label for="gitterHelp">Gitter help rooms</label>
+            <br>
+            <!-- Videos -->
+            <input type="checkbox" name="videos" id="videos" value="videos">
+            <label for="videos">Videos</label>
+            <br>
+            <!-- City Meetups -->
+            <input type="checkbox" name="cityMeet" id="cityMeet" value="cityMeet">
+            <label for="cityMeet">City Meetups</label>
+            <br>
+            <!-- Wiki -->
+            <input type="checkbox" name="wiki" id="wiki" value="wiki">
+            <label for="wiki">Wiki</label>
+            <br>
+            <!-- Forum -->
+            <input type="checkbox" name="forum" id="forum" value="forum">
+            <label for="forum">Forum</label>
+            <br>
+            <!-- Additional Courses -->
+            <input type="checkbox" name="addCourses" id="addCourses" value="addCourses">
+            <label for="addCourses">Additional Courses</label>
+
+        <br>
+        <br>
+
+        <!-- Text Area -->
+        <label for="feedback">Any comments or suggestions?</label><br>
+        <textarea name="feedback" id="feedback" rows="10" cols="30" placeholder="Enter your comment here..."></textarea>
+
+        <br>
+        <br>
+
+        <!-- Submit -->
+        <input type="submit" name="button" value="Submit">
+
+    </form>
+</body>
+</html>
