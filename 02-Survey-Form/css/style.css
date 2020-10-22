@@ -6,6 +6,7 @@ body {
   background-image: url(img/background1.png);
   background-size: cover;
   background-attachment: fixed;
+  margin-bottom: 70px;
 }
 
 #title {
