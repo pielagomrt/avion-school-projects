@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form | Avion School</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <h1 id="title">
+        Avion School Survey Form
+    </h1>
+    <p id="description">
+        <i>Thank you for taking the time to help us improve the platform</i>
+    </p>
+
+    <form id="survey-form">
+        <!-- Name -->
+        <label for="name" id="name-label">Name</label><br>
+        <input type="text" name="name" id="name" placeholder="Enter your name" required>
+
+        <br>
+        <br>
+
+        <!-- Email -->
+        <label for="email" id="email-label">Email</label><br>
+        <input type="email" name="email" id="email" placeholder="Enter your Email" required>
+
+        <br>
+        <br>
+
+        <!-- Age --> 
+        <label for="number" id="number-label">Age <small>(optional)</small></label><br>
+        <input type="tel" id="number" pattern="[0-9]{2}" maxlength="2" min="10" max="99" title="Please enter a valid age" name="age" placeholder="Age">
+
+        <br>
+        <br>
+
+        <!-- Dropdown: Current Role -->
+        <label for="dropdown" id="role">Which option best describes your current role?</label><br>
+        <select name="dropdown" id="dropdown">
+            <option value="" disabled selected hidden>Select current role</option>
+            <option value="">Employed</option> 
+            <option value="">Self-employed</option>
+            <option value="">Student</option>
+            <option value="">Prefer not to answer</option>
+        </select>
+
+        <br>
+        <br>
+
+        <!-- Radio Button: Recommendation -->
+        <label for="choices" id="recommend">Would you recommend Avion School to a friend?</label><br>
+            <!-- Definitely -->
+            <input type="radio" name="recommend" id="definitely" value="def">
+            <label for="definitely" class="choices">Definitely</label>
+            <br>
+            <!-- Maybe -->
+            <input type="radio" name="recommend" id="maybe" value="myb">
+            <label for="maybe" class="choices">Maybe</label>
+            <br>
+            <!-- Not Sure -->
+            <input type="radio" name="recommend" id="notSure" value="ns">
+            <label for="notSure" class="choices">Not Sure</label>
+        
+        <br>
+        <br>
+        
+        <!-- Dropdown: Favorite Feature -->
+        <label for="feature" id="faveFeature">What is your favorite feature of Avion School?</label><br>
+        <select name="feature" id="feature">
+            <option value="" disabled selected hidden>Select an option</option>
+            <option value="">Learning quality</option>
+            <option value="">Community support</option>
+            <option value="">Other</option>
+        </select>
+ 
+        <br>
+        <br>
+
+        <!-- Checklist -->
+        <label for="improve" id="improve">What would you like to see improved? <small>(Check all that apply)</small></label><br>
+            <!-- Front-end Projects-->
+            <input type="checkbox" name="frontEnd" id="frontEnd" value="frontEnd" class="improve-check">
+            <label for="frontEnd" class="improvement">Front-end Projects</label>
+            <br>
+            <!-- Back-end Projects -->
+            <input type="checkbox" name="backEnd" id="backEnd" value="backEnd" class="improve-check">
+            <label for="backEnd" class="improvement">Back-end Projects</label>
+            <br>
+            <!-- Data Visualization -->
+            <input type="checkbox" name="dataVisual" id="dataVisual" value="dataVisual" class="improve-check">
+            <label for="dataVisual" class="improvement">Data Visualization</label>
+            <br>
+            <!-- Challenges -->
+            <input type="checkbox" name="challenges" id="challenges" value="challenges" class="improve-check">
+            <label for="challenges" class="improvement">Challenges</label>
+            <br>
+            <!-- Open Source Community -->
+            <input type="checkbox" name="openSource" id="openSource" value="openSource" class="improve-check">
+            <label for="openSource" class="improvement">Open Source Community</label>
+            <br>
+            <!-- Gitter help rooms -->
+            <input type="checkbox" name="gitterHelp" id="gitterHelp" value="gitterHelp" class="improve-check">
+            <label for="gitterHelp" class="improvement">Gitter help rooms</label>
+            <br>
+            <!-- Videos -->
+            <input type="checkbox" name="videos" id="videos" value="videos" class="improve-check">
+            <label for="videos" class="improvement">Videos</label>
+            <br>
+            <!-- City Meetups -->
+            <input type="checkbox" name="cityMeet" id="cityMeet" value="cityMeet" class="improve-check">
+            <label for="cityMeet" class="improvement">City Meetups</label>
+            <br>
+            <!-- Wiki -->
+            <input type="checkbox" name="wiki" id="wiki" value="wiki" class="improve-check">
+            <label for="wiki" class="improvement">Wiki</label>
+            <br>
+            <!-- Forum -->
+            <input type="checkbox" name="forum" id="forum" value="forum" class="improve-check">
+            <label for="forum" class="improvement">Forum</label>
+            <br>
+            <!-- Additional Courses -->
+            <input type="checkbox" name="addCourses" id="addCourses" value="addCourses" class="improve-check">
+            <label for="addCourses" class="improvement">Additional Courses</label>
+
+        <br>
+        <br>
+
+        <!-- Text Area -->
+        <label for="feedback" id="suggest">Any comments or suggestions?</label><br>
+        <textarea name="feedback" id="feedback" rows="10" cols="30" placeholder="Enter your comment here..."></textarea>
+
+        <br>
+        <br>
+
+        <!-- Submit -->
+        <input type="submit" name="button" id="submit" value="Submit">
+
+    </form>
+    </div>
+</body>
+</html>

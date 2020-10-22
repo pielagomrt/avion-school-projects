@@ -1,0 +1,108 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-image: url(img/background1.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#title {
+  color: whitesmoke;
+  margin-top: 40px;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+#description {
+  color: whitesmoke;
+  font-size: 20px;
+  margin-top: 2px;
+  text-align: center;
+}
+
+#survey-form {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: whitesmoke;
+  border-radius: 7px;
+  font-size: 20px;
+  margin: auto;
+  max-width: 670px;
+  background: 0.9;
+  padding: 50px;
+  line-height: 35px;
+}
+
+#name,
+#email,
+#number,
+#feedback {
+  width: 650px;
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 15px;
+}
+
+#feedback {
+  height: 200px;
+  padding: 10px 20px;
+}
+
+#dropdown,
+#feature {
+  width: 675px;
+  height: 44px;
+  padding: 5px 10px;
+  font-size: 15px;
+}
+
+#submit {
+  background-color: green;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  width: 675px;
+  height: 55px;
+}
+
+#name-label,
+#email-label,
+#number-label,
+#role,
+#recommend,
+#faveFeature,
+#improve,
+#suggest {
+  font-weight: bold;
+}
+
+.choices,
+.improvement {
+  font-size: 20px;
+}
+
+input#definitely,
+input#maybe,
+input#notSure {
+  width: 20px;
+  height: 20px;
+  vertical-align: text-top;
+}
+
+input#frontEnd,
+input#backEnd,
+input#dataVisual,
+input#challenges,
+input#openSource,
+input#gitterHelp,
+input#videos,
+input#cityMeet,
+input#wiki,
+input#forum,
+input#addCourses {
+  width: 25px;
+  height: 25px;
+  vertical-align: text-top;
+}
