@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* -------------- HEADER -------------- */
+#nav-bar {
+  background: black;
+  font-size: 20px;
+  padding: 30px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav-link {
+  list-style-type: none;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: white;
+}
+
+#home {
+  background-image: url(homepage.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#home h4 {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 40px;
+  margin: auto;
+}
+
+/* -------------- ABOUT -------------- */
+
+#about {
+  box-sizing: border-box;
+  margin: auto 100px;
+  padding-top: 170px;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  /* border: 2px solid black; */
+}
+
+#about-info {
+  text-align: center;
+  margin: 40px;
+  margin-right: 30px;
+  max-width: 600px;
+  padding-top: 80px;
+  /* border: 2px solid black; */
+}
+#about-info p {
+  font-size: 20px;
+  line-height: 40px;
+}
+
+#about-video {
+  margin: 50px;
+  padding: 0;
+  /* border: 2px solid black; */
+}
+
+#about-video video {
+  max-width: 100%;
+  max-height: auto;
+  padding: auto;
+}
+
+/* -------------- PRODUCTS -------------- */
+
+#products {
+  margin-top: 150px;
+  height: 100%;
+}
+
+/* -------------- CONTACT -------------- */
+#contact {
+  padding-top: 130px;
+  /* border: 2px solid black; */
+  height: 80%;
+  width: 900px;
+  margin: auto;
+  padding-bottom: -50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#contact-header {
+  margin: 145px 70px auto 50px;
+  padding: 30px;
+  /* border: 2px solid black; */
+}
+#contact-form {
+  margin: 20px;
+  max-width: 400px;
+  padding: 40px;
+  /* border: 2px solid black; */
+}
+
+#contact-header h3 {
+  text-align: center;
+  font-size: 50px;
+}
+
+#contact-header h4 {
+  text-align: center;
+  font-size: 15px;
+}
+
+#contact-form p {
+  font-size: 12px;
+}
