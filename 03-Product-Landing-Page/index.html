@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Krub:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <!-- End of Font -->
 </head>
 
@@ -34,7 +35,7 @@
             <img src="css/img/logo.png" alt="" id="header-img">
             <!---------->
             
-            <li><a href="#product" id="header3">Product</a></li>
+            <li><a href="#productOne" id="header3">Products</a></li>
             <li><a href="#contact" id="header4">Contact</a></li>
         </ul>
       </nav>
@@ -58,9 +59,9 @@
 
       <!-- Buy Button -->
       <div id="box-2">
-        <button id="buyNowButton" type="button">
-          Order Now!
-        </button>
+          <a id="buyNowButton" href="#productOne">
+            Order Now!
+          </a>
       </div>
       <!-- End of Buy Button -->
 
@@ -88,7 +89,7 @@
 
     <!-- Info Text -->
     <div id="about-info">
-      <h1>World’s Most Powerful<br>Portable Blender®</h1>
+      <h1>World’s Most Powerful<br>Portable Blender<sup>&reg;</sup></h1>
       <br>
       <h2>Our mission is to enable people to make healthy choices anytime, anywhere.</h2>
       <br>
@@ -112,24 +113,139 @@
 
 
 <!---------------------- PRODUCT ----------------------->
-<div id="product">
-  <img src="css/img/product.png" alt="">
 
-<div id="remove">
-<p>After blending 8-12 beverages on a single charge, simply plug into any USB port or charger to recharge in no time.
+<!-- BlendJet One -->
+<div id="productOne">
 
-With BlendJet and its six stainless steel blades, you’re not sacrificing power for convenience! The BlendJet is so
-powerful it can even crush ice. All without a kitchen or power outlet.
+  <!-- Header -->
+  <div id="product-1">
+    <div class="productHeader">
+      <ul class="productHeader">
+        <li id="product1-header-1">
+          <a href="#productOne">BlendJet One</a>
+        </li>
+        <li id="product1-header-2">
+          <a href="#productTwo">BlendJet 2<sup>new!</sup></a>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- flexbox specs -->
+    <div class="spec-container">
+      <div class="specs">
+        <p>
+          USB<br>Rechargeable
+        </p>
+      </div>
+      <div class="specs">
+        <p>
+          8 - 12 beverages<br>on a single charge
+        </p>
+      </div>
+      <div class="specs">
+        <p>
+          12oz<br>capacity
+        </p>
+      </div>
+      <div class="specs">
+        <p>
+          Stainless steel blades for crushing ice
+        </p>
+      </div>
+      <div class="specs">
+        <p>
+          Self<br>cleaning
+        </p>
+      </div>
+    </div>
 
-Plus, your BlendJet will practically clean itself. Imagine never having to clean your blender again. Just add water and
-an optional drop of soap, and run your BlendJet until, “Presto,” it’s clean!
+    <!-- flexbox purchase -->
+    <div class="addToCart">
+      <div class="img">
+        <img src="css/img/blendjet1.jpg" alt="BlendJet One">
+      </div>
+        <div class="price">
+          <div class="price-1">
+            <h1>BlendJet One</h1>
+            <h2>£31.95 GBP</h2>
+          </div>
+          <div class="addCart">
+            <a href="https://blendjet.com/products/blendjet-one" target="_blank">
+              🛒 ADD TO CART
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-It’s compact enough to carry with you using its built-in carrying strap, or even to fit in your car’s cup holder, but
-large enough to make all of your favorites.
+<!-- End of BlendJet One -->
 
-The BlendJet One also features a built-in strainer to help keep your beverages chunk free.</p>
-</div>
-</div>
+<!-- BlendJet 2 -->
+  <div id="productTwo">
+
+    <!-- Header -->
+    <div id="product-2">
+      <div class="productHeader">
+        <ul class="productHeader">
+          <li id="product2-header-1">
+            <a href="#productOne">BlendJet One </a>
+          </li>
+          <li id="product2-header-2">
+            <a href="#productTwo">BlendJet 2<sup>new!</sup></a>
+          </li>
+        </ul>
+      </div>
+    
+    <!-- flexbox -->
+      <div class="spec-container">
+        <div class="specs">
+          <p>
+            USB-C<br>Port
+          </p>
+        </div>
+        <div class="specs">
+          <p>
+            15 beverages<br>on a single charge
+          </p>
+        </div>
+        <div class="specs">
+          <p>
+            33% more capacity<br>(16oz)
+          </p>
+        </div>
+        <div class="specs">
+          <p>
+            Water<br>resistant
+          </p>
+        </div>
+        <div class="specs">
+          <p>
+            Same<br>compact size
+          </p>
+        </div>
+      </div>
+
+    <!-- flexbox -->
+      <div class="addToCart">
+        <div class="img">
+          <img src="css/img/blendjet2.png" alt="BlendJet 2">
+        </div>
+        <div class="price">
+          <div class="price-1">
+            <h1>BlendJet 2</h1>
+            <h2>£39.95 GBP</h2>
+          </div>
+          <div class="addCart">
+            <a href="https://blendjet.com/products/blendjet-2" target="_blank">
+              🛒 ADD TO CART
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- End of BlendJet 2 -->
 <!------------------- End of PRODUCT ------------------->
 
 
