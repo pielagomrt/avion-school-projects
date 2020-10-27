@@ -3,108 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BlendJet&reg;</title>
+    <!-- Stylesheet -->
     <link type="text/css" href="css/styles.css" rel="stylesheet">
+    <!-- End of Stylesheet -->
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+    <!-- End of Font -->
 </head>
+
 <body>
-<!------------ HOME ------------>
+<!------------------------ HOME ------------------------>
   <div id="home">
+
+    <!--- Header -->
     <h1 id="header">
+
       <!-- Nav Bar -->
       <nav id="nav-bar">
         <ul class="nav-link">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#header" id="header1">Home</a></li>
+            <li><a href="#about" id="header2">About</a></li>
+            
             <!-- logo -->
-            <img src="" alt="" id="header-img">
+            <img src="css/img/logo.png" alt="" id="header-img">
             <!---------->
-            <li><a href="#products">Products</a></li>
-            <li><a href="#contact">Contact</a></li>
+            
+            <li><a href="#product" id="header3">Product</a></li>
+            <li><a href="#contact" id="header4">Contact</a></li>
         </ul>
       </nav>
+      <!-- End of Nav Bar -->
+
     </h1>
+    <!-- End of Header -->
 
-    <!-- Buy Now -->
-   
+    <!-- Buy -->
+    <div id="frontPage">
+      
+      <!-- Buy Text -->
+      <div id="box-1">
+        <p>
+          Imagine the freedom of being able to go anywhere<br>and blend your favorite smoothies, shakes, margaritas, or baby food<br>without the limitations of a regular blender.
+        </p>
+      </div>
+      <!-- End of Buy Text -->
 
-  <h4>For the original website, click
-    <a href="">here.</a>
-  </h4>
+      <!-- Buy Button -->
+      <div id="box-2">
+        <button id="buyNowButton" type="button">
+          Order Now!
+        </button>
+      </div>
+      <!-- End of Buy Button -->
+
+      <!-- Original Website Link -->
+      <div id="box-3">
+      <h4>
+        Click
+        <a href="https://blendjet.com" target="_blank">here</a>
+        to visit the original website.
+      </h4>
+      </div>
+      <!-- End of Original Website Link -->
+
+    </div>
+    <!-- End of Buy -->
+
+    
+
 </div>
+<!--------------------- End of HOME -------------------->
 
 
-<!------------ ABOUT ------------>
+<!------------------------ ABOUT ----------------------->
 <div id="about">
 
+    <!-- Info Text -->
     <div id="about-info">
-      <h1>Who We Are</h1>
+      <h1>World’s Most Powerful<br>Portable Blender®</h1>
       <br>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur minima adipisci eligendi placeat fugit ex aut at beatae. Doloremque ex aliquam harum soluta aperiam distinctio numquam quidem corporis dolorem consectetur!</p>
+      <h2>Our mission is to enable people to make healthy choices anytime, anywhere.</h2>
+      <br>
+      <p>Now, you’ll experience the freshest, most amazing flavors everywhere you go, because you’re living in the future with a BlendJet&reg; portable and USB rechargeable blender.</p>
+      <br>
+      <p>We’re proud to have over 1,000,000 happy BlendJet&reg; customers blending around the world. We stand behind our product, and
+      offer a 30-day money back guarantee.</p>
     </div>
+    <!-- End of Info Text -->
 
     <!-- Video -->
     <div id="about-video">
-        <video src="css/vid/human-nature.mp4" id="video" alt="" autoplay controls=""></video>
-        <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum iusto error magni in consequatur autem officia. Expedita numquam ut repellendus!</p> -->
+      <video autoplay loop muted>
+        <source src="css/vid/blendjet.mp4" type="video/mp4" />
+      </video>
     </div>
-</div>
-
-<!------------ PRODUCTS ------------>
-<div id="products">
-
+    <!-- End of Video -->
 
 </div>
+<!--------------------- End of ABOUT ------------------->
 
 
+<!---------------------- PRODUCT ----------------------->
+<div id="product">
+  <img src="css/img/product.png" alt="">
 
-<!------------ CONTACT ------------>
+<div id="remove">
+<p>After blending 8-12 beverages on a single charge, simply plug into any USB port or charger to recharge in no time.
+
+With BlendJet and its six stainless steel blades, you’re not sacrificing power for convenience! The BlendJet is so
+powerful it can even crush ice. All without a kitchen or power outlet.
+
+Plus, your BlendJet will practically clean itself. Imagine never having to clean your blender again. Just add water and
+an optional drop of soap, and run your BlendJet until, “Presto,” it’s clean!
+
+It’s compact enough to carry with you using its built-in carrying strap, or even to fit in your car’s cup holder, but
+large enough to make all of your favorites.
+
+The BlendJet One also features a built-in strainer to help keep your beverages chunk free.</p>
+</div>
+</div>
+<!------------------- End of PRODUCT ------------------->
+
+
+<!---------------------- CONTACT ----------------------->
   <div id="contact">
 
     <div id="contact-header">
-        <h3>Write to us</h3><br>
+        <h3>Get in touch</h3><br>
         <h4>Our team will respond to your query<br>as soon as possible.</h4>
     </div>
 
     <div id="contact-form">
         <form id="form">
         <!-- Name -->
-        <label for="name">Name</label><br>
-        <input type="text" name="name" id="name" placeholder="Enter your name" required>
+        <input type="text" name="name" id="name" placeholder="Name" required>
         
-        <br>
         <br>
 
         <!-- Email input -->
-        <label for="email">Email</label><br>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
         
-        <br>
         <br>
 
         <!-- Message -->
-        <label for="message">Message</label><br>
-        <textarea name="message" id="message" rows="10" cols="30" placeholder="Enter your message here..."></textarea>
+        <textarea name="message" id="message" rows="10" cols="30" placeholder="Message"></textarea>
         
-        <br>
         <br>
 
         <!-- Checkbox -->
         <input type="checkbox" name="subscribe" id="subscribe" value="subscribe">
-        <label for="subscribe"><small>Yes, I would like to receive news and offers from</small></label>
+        <label for="subscribe">Yes, I would like to receive news and offers from BlendJet&reg;.</label>
 
-        <br>
         <br>
 
         <!-- Submit -->
-        <input type="submit" name="button" id="submit" name="Submit">
+        <input type="submit" name="button" id="submit" value="Send">
 
-        <br>
-        <br>
 
         <!-- Additional text -->
-        <p><small>You can unsubscribe any time via the link from our marketing emails and newsletters.</small></p>
+        <div id="addtlText">
+          <p><small>You can unsubscribe any time via the link from our marketing emails and newsletters.</small></p>
+        </div>
     </form>
     </div>
 </div>
+<!------------------- End of CONTACT ------------------->
 </body>
 </html>
