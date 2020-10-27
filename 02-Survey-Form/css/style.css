@@ -30,15 +30,13 @@ body {
   font-size: 20px;
   margin: auto;
   max-width: 670px;
-  background: 0.9;
   padding: 50px;
   line-height: 35px;
 }
 
 #name,
 #email,
-#number,
-#feedback {
+#number {
   width: 650px;
   height: 30px;
   padding: 5px 10px;
@@ -47,7 +45,9 @@ body {
 
 #feedback {
   height: 200px;
+  width: 630px;
   padding: 10px 20px;
+  resize: none;
 }
 
 #dropdown,
