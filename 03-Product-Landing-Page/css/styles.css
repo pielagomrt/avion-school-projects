@@ -74,7 +74,7 @@ body {
   justify-content: space-between;
 }
 
-@media (min-width: 1119px) {
+@media (max-width: 1119px) {
   #buy {
     margin-top: 0;
   }
@@ -82,12 +82,13 @@ body {
 
 #box-1 {
   margin: auto;
+  margin-top: 90px;
   max-width: 80%;
   min-width: 50%;
 
   font-family: "Red Hat Display", sans-serif;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 60px;
   color: white;
   line-height: 60px;
 
@@ -96,10 +97,32 @@ body {
   /* border: 2px solid black; */
 }
 
+#textOne {
+  animation: firstText;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+#textTwo {
+  animation: secondText;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
 #box-2 {
   margin: auto;
   max-height: 80px;
-  margin-top: 25px;
+  margin-top: 30px;
+
+  animation: orderNow;
+  animation-duration: 2s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 #box-2 button {
@@ -111,9 +134,9 @@ body {
   font-family: "Questrial", sans-serif;
 
   color: navy;
-  background-color: lightskyblue;
+  background-color: rgba(169, 227, 240, 0.7);
   box-shadow: rgba(0, 0, 0, 0.3) 0 8px 8px 0;
-  border: 5px solid navy;
+  border: 4px solid navy;
   border-radius: 100px;
   transition: all 200ms ease-in-out;
 }
@@ -122,12 +145,18 @@ body {
   cursor: pointer;
   color: white;
   background-color: navy;
-  border: 5px solid navy;
+  border: 4px solid navy;
 }
 
 #box-3 {
-  margin-top: 150px;
+  margin-top: 180px;
   font-size: 20px;
+
+  animation: origWebsite;
+  animation-duration: 2s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 #box-3 h4 {
@@ -359,3 +388,47 @@ input#subscribe {
   max-height: 22px;
 }
 /* ---------------------------- End of CONTACT ---------------------------- */
+
+/* ---------------------------- RESPONSIVENESS ---------------------------- */
+
+/* ---------------------------- End of RESPONSIVENESS ---------------------------- */
+
+/* ---------------------------- ANIMATION ---------------------------- */
+
+@keyframes firstText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes secondText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes orderNow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes origWebsite {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ---------------------------- End of ANIMATION ---------------------------- */
