@@ -62,6 +62,7 @@ body {
 .nav-link a:hover {
   color: white;
 }
+
 /* -------------- End of Header ------------- */
 
 /* -------------- frontPage ------------- */
@@ -530,10 +531,57 @@ input#subscribe {
 }
 /* ---------------------------- End of CONTACT ---------------------------- */
 
+/* ---------------------------- Submit Static Page ---------------------------- */
+
+#static {
+  background-color: whitesmoke;
+  color: navy;
+  height: 100%;
+  line-height: 30px;
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#static h1 {
+  font-size: 40px;
+  font-family: "Lobster", sans-serif;
+  margin-bottom: 30px;
+}
+
+#static h3 {
+  font-family: "Krub", sans-serif;
+}
+
+#static a {
+  text-decoration: none;
+  font-family: "Questrial", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 50px;
+  padding: 20px 50px;
+  border: 4px solid navy;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 3px 7px 0;
+  background-color: rgba(169, 227, 240, 0.4);
+  border-radius: 100px;
+  transition: all 200ms ease-in-out;
+}
+
+#static a:hover {
+  cursor: pointer;
+  color: white;
+  background-color: navy;
+  border: 4px solid navy;
+}
+
+/* ---------------------------- End of Submit Static Page ---------------------------- */
+
 /* ---------------------------- RESPONSIVENESS ---------------------------- */
 
 /* nav bar */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   #nav-bar {
     padding: 5px;
     padding-top: 14px;
@@ -557,7 +605,7 @@ input#subscribe {
 /* end of nav bar */
 
 /* front page */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   #frontPage {
     padding-top: 170px;
   }
@@ -565,12 +613,17 @@ input#subscribe {
   #box-1 {
     font-size: 45px;
   }
+
+  #textOne,
+  #textTwo {
+    display: block;
+  }
 }
 /* end of front page */
 
 /* about */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   #about {
     flex-flow: column;
     justify-content: center;
@@ -619,7 +672,7 @@ input#subscribe {
 
 /* Products */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   #product-1,
   #product-2 {
     padding-top: 160px;
@@ -631,9 +684,6 @@ input#subscribe {
   }
 
   .spec-container {
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-
     font-size: 8px;
   }
 
@@ -669,6 +719,10 @@ input#subscribe {
     margin-bottom: 20px;
   }
 
+  .price-1 h1 {
+    text-align: center;
+  }
+
   .addCart a {
     padding: 5px 20px;
   }
@@ -678,7 +732,7 @@ input#subscribe {
 
 /* Contact */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   #contact {
     flex-flow: column wrap;
   }
@@ -687,16 +741,19 @@ input#subscribe {
     padding: 0;
     padding-top: 160px;
     margin: 0;
+    /* border: 2px solid black; */
   }
 
   #contact-form {
     margin-top: 15px;
     margin-left: 70px;
+    /* margin-left: 30%; */
     width: 300px;
     height: 360px;
     padding: 20px;
     padding-bottom: 0;
     margin-bottom: 45px;
+    /* border: 2px solid black; */
   }
 
   #contact-header h3 {
@@ -743,6 +800,24 @@ input#subscribe {
   }
 }
 /* End of Contact */
+
+/* Static Page */
+
+@media screen and (max-width: 900px) {
+  #static h1 {
+    font-size: 30px;
+  }
+
+  #static h3 {
+    font-size: 15px;
+  }
+
+  #static a {
+    font-size: 20px;
+    padding: 15px 40px;
+  }
+}
+/* End of Static Page */
 
 /* ---------------------------- End of RESPONSIVENESS ---------------------------- */
 
