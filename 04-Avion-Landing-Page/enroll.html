@@ -4,8 +4,278 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enrollment Form | Avion School</title>
+
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="stylesheet" type="text/css" href="css/styles.form.css">
+    <link rel="stylesheet" type="text/css" href="css/mediaquery.css">
+
+    <!-- Fonts -->
+    
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    
+    <!-- End of Fonts -->
 </head>
 <body>
-    
+
+    <!-- container -->
+    <div class="container">
+
+        <!-- header -->
+        <header id="header">
+            <img id="logo" src="img/avion.png">
+            <h1>Enrollment Form</h1>
+            <p>Congratulations on taking the first step to a career in software development! Start by filling up this application form,
+            and our team will reach out to guide you through the process.</p>
+        </header>
+        <!-- end of header -->
+
+        <!-- form -->
+        <section id="form">
+
+            <form action="submit.html">
+
+                <!-- name -->
+                <label for="name" id="name">What is your full name? *</label>
+                
+                <br><br>
+
+                <input type="text" name="name" id="name" placeholder="Enter your full name here" required>
+                <!-- end of name -->
+
+                <br><br><hr><br>
+
+                <!-- Radio button : Age -->
+                <label for="age" id="age">Are you 18 years old or older? *</label>
+
+                <br><br>
+                    
+                    <!-- Yes -->
+                    <input type="radio" name="age" id="age-yes" value="age-yes" required>
+                    <label for="age-yes">Yes</label><br>
+
+                    <!-- No -->
+                    <input type="radio" name="age" id="age" value="age-no" required>
+                    <label for="age-no">No</label>
+
+                <!-- End of radio button : age -->
+
+                <br><br><hr><br>
+
+                <!-- email address -->
+                <label for="email">What is your email address? *<label>
+                
+                <br><br>
+
+                <input type="email" name="email" id="email" placeholder="Enter your Email" required>
+                <!-- end of email address -->
+
+                <br><br><hr><br>
+
+                <!-- mobile number -->
+                <label for="number">What is your mobile number? *</label>
+
+                <br><br>
+
+                <input type="tel" id="number" pattern="[0][9][0-9]{2}-[0-9]{3}-[0-9]{4}" maxlength="13" title="09XX-XXX-XXXX" name="number" placeholder="09XX-XXX-XXXX" required>
+
+                <!-- end of mobile number -->
+
+                <br><br><hr><br>
+
+                <!-- Radio button: location -->
+                <label for="location" id="location">Do you currently live in the Philippines? *</label>
+
+                <br><br>
+                
+                    <!-- Yes -->
+                    <input type="radio" name="location" id="loc-yes" value="loc-yes" required>
+                    <label for="loc-yes">Yes</label><br>
+                    
+                    <!-- No -->
+                    <input type="radio" name="location" id="loc-no" value="loc-no" required>
+                    <label for="loc-no">No</label>
+
+                <!-- end of radio button: location -->
+
+                <br><br><hr><br>
+
+                <!-- home address -->
+                <label for="address" id="address">What is your home address? *</label>
+
+                <br><br>
+                
+                <input type="text" name="address" class="address" placeholder="Enter your home address here" required>
+
+                <!-- end of home address -->
+
+                <br><br><hr><br>
+
+                <!-- Radio button: class schedule -->
+                <label for="schedule" id="schedule">What class schedule do you wish to enroll in? *</label>
+
+                <br><br>
+                
+                    <!-- Full-time -->
+                    <input type="radio" name="schedule" id="fullTime" value="fullTime" required>
+                    <label for="fullTime"><b>Full-time Course:</b> M-F (9am-6pm)</label><br>
+                    
+                    <!-- Part-time -->
+                    <input type="radio" name="schedule" id="partTime" value="partTime" required>
+                    <label for="partTime"><b>Part-time Course:</b> M-F (7pm-9pm) & Sat (9pm-1pm)</label>
+
+                <!-- end of radio button: class schedule -->
+
+                <br><br><hr><br>
+
+                <!-- radio button: attendance -->
+                <label for="attendance" id="attendance">Will you be able to attend for 95% or more of our live sessions in their entirety? *<br><small>Avion School's full-time program runs weekdays from 10am to 6pm for around 12 weeks, depending on holiday schedules.</small></label>
+
+                <br><br>
+                
+                    <!-- Yes -->
+                    <input type="radio" name="attendance" id="attend-yes" value="attend-yes" required>
+                    <label for="attend-yes">Yes</label><br>
+                    
+                    <!-- No -->
+                    <input type="radio" name="attendance" id="attend-no" value="attend-no" required>
+                    <label for="attend-no">No</label>
+
+                <!-- end of radio button: attendance -->
+
+                <br><br><hr><br>
+
+                <!-- radio button: outside commitments -->
+                <label for="commit" id="commit">Do you have any other commitments that will conflict with the live, mandatory course hours? *<br><small>We're referring to standing commitments here: we know life happens! Avion School's curriculum is built on attending live lectures, working with instructors and peers, and pair-programming.</small></label>
+
+                <br><br>
+                
+                    <!-- Yes -->
+                    <input type="radio" name="commit" id="commit-yes" value="commit-yes" required>
+                    <label for="commit-yes">Yes</label><br>
+                    
+                    <!-- No -->
+                    <input type="radio" name="commit" id="commit-no" value="commit-no" required>
+                    <label for="commit-no">No</label>
+
+                <!-- end of radio button: outside commitments -->
+
+                <br><br><hr><br>
+
+                <!-- radio button: payment method -->
+                <label for="commit" id="commit">If accepted, which payment method will you be using? *</label>
+
+                <br><br>
+                
+                    <!-- Upfront -->
+                    <input type="radio" name="payment" id="upfront" value="upfront" required>
+                    <label for="upfront"><b>Share Agreement Option:</b> Php 0 upfront + 2 year, 17% income share agreement</label><br>
+                    
+                    <!-- Income Sharing -->
+                    <input type="radio" name="payment" id="installment" value="installment" required>
+                    <label for="installment"><b>Upfront Payment:</b> Php 80,000</label>
+
+                <!-- end of radio button: payment method -->
+
+                <br><br><hr><br>
+
+                <!-- Checklist: experience -->
+                <label for="experience" id="experience">Which of the following best describes your programming experience? *<br><small>This will not affect whether we accept you or not. We're just trying to understand the experience of those applying to
+                our school.</small></label>
+
+                <br><br>
+
+                    <!-- no experience-->
+                    <input type="checkbox" name="experience" id="noExp" value="noExp">
+                    <label for="noExp" class="experience"><b>No experience:</b> but I’m excited to start learning</label><br>
+
+                    <!-- beginner-->
+                    <input type="checkbox" name="experience" id="beginner" value="beginner">
+                    <label for="beginner" class="experience"><b>Beginning learner:</b> I’ve played with some introductory coding lessons and tutorials</label><br>
+
+                    <!-- intermediate-->
+                    <input type="checkbox" name="experience" id="intermediate" value="intermediate">
+                    <label for="intermediate" class="experience"><b>Intermediate learner:</b> I have completed some coding classes or tutorials</label><br>
+
+                    <!-- advanced-->
+                    <input type="checkbox" name="experience" id="advanced" value="advanced">
+                    <label for="advanced" class="experience"><b>Advanced:</b> I can create simple applications</label><br>
+
+                    <!-- professional-->
+                    <input type="checkbox" name="experience" id="professional" value="professional">
+                    <label for="professional" class="experience"><b>Professional:</b> I am an experienced software engineer and want to upgrade my skills</label>
+                <!-- end of checklist: experience -->
+
+                <br><br><hr><br>
+
+                <!-- Referral -->
+                <label for="referral" id="referral">How did you hear about Avion School?</label>
+
+                <br><br>
+                
+                <input type="text" name="referral" class="referral" placeholder="Enter the person or organization's name here">
+
+                <!-- End of referral -->
+
+                <br><br><hr><br>
+
+                <!-- Linkedin Profile -->
+                <label for="linkedin" id="linkedin">Do you have a LinkedIn Profile?<small><br>If none, leave blank.</small></label>
+
+                <br><br>
+                
+                <input type="text" name="linkedin" class="linkedin" placeholder="Enter your LinkedIn URL here">
+
+                <!-- end of linkedin profile -->
+
+                <br><br><hr><br>
+
+                <!-- Github username -->
+                <label for="github" id="github">Do you have a GitHub username?<small><br>Please only enter your username, and not the full URL to your GitHub profile. If none, leave blank.</small></label>
+
+                <br><br>
+
+                <input type="text" name="github" class="github" placeholder="Enter your GitHub username here">
+
+                <!-- end of github username -->
+
+                <br><br><hr><br>
+
+                <!-- radio button: earliest joining -->
+                <label for="join" id="join">Avion School runs classes every four to eight weeks. How soon are you looking to start class? *</label>
+
+                <br><br>
+                
+                    <!-- within the next 4 weeks -->
+                    <input type="radio" name="join" id="earliest" value="earliest" required>
+                    <label for="earliest">Within the next four weeks</label><br>
+
+                    <!-- within the next 3 months -->
+                    <input type="radio" name="join" id="earlier" value="earlier" required>
+                    <label for="earlier">Within the next three months</label><br>
+
+                    <!-- within the next 3-6 months -->
+                    <input type="radio" name="join" id="early" value="early" required>
+                    <label for="early">Within the next three to six months</label><br>
+
+                    <!-- not sure -->
+                    <input type="radio" name="join" id="notSure" value="notSure" required>
+                    <label for="notSure">I'm not sure<label>                
+                
+                <!-- end of radio button: earliest joining -->
+
+                <br><br><br>
+
+                <!-- Submit -->
+                <input type="submit" name="button" id="submit" value="Submit">
+                <!-- end of submit -->
+
+            </form>
+
+        </section>
+        <!-- end of form -->
+
+    </div>
+    <!-- end of container -->
+
 </body>
 </html>
