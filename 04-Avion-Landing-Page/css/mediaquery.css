@@ -4,26 +4,324 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199.98px) {
   .container {
     width: 960px;
   }
+
+  /* ABOUT */
+
+  #about {
+    height: 120%;
+  }
+  #about .container {
+    flex-direction: column;
+    width: 100%;
+    padding-top: 90px;
+  }
+
+  #about-info {
+    text-align: center;
+    width: 70%;
+    /* background-color: purple; */
+  }
+
+  #about-info hr {
+    margin: auto;
+  }
+
+  #about-list {
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+  #top,
+  #middle,
+  #bottom {
+    align-content: center;
+    width: 100%;
+    /* border: 2px solid black; */
+  }
+
+  .top li,
+  .middle li,
+  .bottom li {
+    /* border: 2px solid black; */
+    margin: 20px 0;
+    width: 450px;
+    font-size: 25px;
+  }
+
+  .top li,
+  .middle li {
+    margin-bottom: 0;
+  }
+
+  /* end of ABOUT */
+
+  /* COURSES */
+
+  #courses {
+    height: 115%;
+  }
+
+  #courses .container {
+    flex-flow: column;
+    margin: 50px auto;
+  }
+  /* end of COURSES */
+
+  /* TESTIMONIALS */
+  #testimonials {
+    height: 220%;
+  }
+
+  #testimonials .container {
+    margin: auto;
+  }
+
+  #students {
+    margin: auto;
+    width: 70%;
+    flex-direction: column;
+  }
+
+  #testimonials img {
+    width: 70px;
+  }
+
+  /* end of TESTIMONIALS */
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
   .container {
     width: 720px;
   }
+
+  /* HEADER */
+
+  /* end of HEADER */
+
+  /* HERO-1 */
+  #hero #img {
+    display: none;
+  }
+
+  #hero #main {
+    text-align: center;
+  }
+  /* end of HERO-1 */
+
+  /* ABOUT */
+  #about-info h2 {
+    font-size: 90%;
+    line-height: 25px;
+  }
+  /* end of ABOUT */
+
+  /* PROCESS */
+  #process {
+    height: 140%;
+  }
+
+  #process .container {
+    height: 80%;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+  }
+
+  .process {
+    line-height: 25px;
+    padding: 20px;
+    flex: none;
+    border-top: 5px solid #d7c78c;
+    border-bottom: 5px solid #d7c78c;
+    border-left: transparent;
+    border-right: transparent;
+  }
+
+  .bootcamp {
+    border: transparent;
+  }
+  /* end of PROCESS */
+
+  /* CONTACT */
+  .contact {
+    font-size: 100%;
+    line-height: 25px;
+  }
+
+  /* end of CONTACT */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .container {
     width: 540px;
   }
+
+  /* HERO-1*/
+  #hero h1 {
+    font-size: 300%;
+    line-height: 65px;
+  }
+
+  #hero h2 {
+    font-size: 20px;
+  }
+
+  #hero h3 {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  /* end of HERO-1 */
+
+  /* HERO-2 */
+
+  #hero-2 p {
+    font-size: 30px;
+    line-height: 45px;
+  }
+
+  /* End of HERO-2 */
+
+  /* ABOUT */
+
+  /* end of ABOUT */
+
+  /* COURSES */
+  .container-1 {
+    width: auto;
+  }
+
+  /* end of COURSES */
+
+  /* CONTACT */
+  .contact {
+    font-size: 80%;
+  }
+
+  /* end of CONTACT */
 }
 
-@media (max-width: 576px) {
+@media (max-width: 720px) {
+  #courses .container {
+    margin: 50px auto;
+  }
+
+  #testimonials {
+    height: 230%;
+  }
+}
+
+@media (max-width: 575.98px) {
   .container {
     width: 95%;
   }
+
+  #hero-2 p {
+    font-size: 24px;
+  }
+
+  /* ABOUT */
+  .top li,
+  .middle li,
+  .bottom li {
+    /* border: 2px solid black; */
+    margin: 20px 0;
+    width: 300px;
+    font-size: 20px;
+  }
+  /* end of ABOUT */
+
+  /* COURSES */
+
+  #courses {
+    height: 130%;
+  }
+
+  #courses .container {
+    flex-direction: column;
+    margin: 50px auto;
+    padding-top: 40px;
+  }
+
+  .courses {
+    width: 310px;
+    height: 220px;
+  }
+  /* end of COURSES */
+
+  /* CONTACT */
+  #contact {
+    height: 60%;
+  }
+  #contact .container {
+    flex-direction: column;
+  }
+
+  .contact {
+    font-size: 120%;
+    line-height: 25px;
+  }
+
+  /* end of CONTACT */
+}
+
+@media (max-width: 376px) {
+  /* ABOUT */
+  .top li,
+  .middle li,
+  .bottom li {
+    /* border: 2px solid black; */
+    margin: 20px 0;
+    width: 300px;
+    font-size: 20px;
+  }
+
+  /* end of ABOUT */
+
+  /* COURSES */
+  #courses {
+    height: 115%;
+  }
+
+  /* end of courses */
+
+  /* PROCESS */
+  .process {
+    width: 120%;
+  }
+  /* end of PROCESS */
+
+  /* TESTIMONIALS */
+  #testimonials {
+    height: 230%;
+  }
+
+  #students {
+    width: 100%;
+  }
+  /* end of TESTIMONIALS */
+
+  /* ENROLL */
+  #enroll {
+    height: 40%;
+  }
+
+  #enroll h1 {
+    font-size: 30px;
+  }
+  /* end of ENROLL */
+
+  /* CONTACT */
+  #contact {
+    height: 48%;
+  }
+
+  .contact {
+    margin: 10px;
+  }
+
+  /* end of CONTACT */
 }
