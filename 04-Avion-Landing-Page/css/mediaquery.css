@@ -204,16 +204,6 @@
   /* end of CONTACT */
 }
 
-@media (max-width: 720px) {
-  #courses .container {
-    margin: 50px auto;
-  }
-
-  #testimonials {
-    height: 230%;
-  }
-}
-
 @media (max-width: 575.98px) {
   .container {
     width: 95%;
@@ -266,6 +256,16 @@
   }
 
   /* end of CONTACT */
+}
+
+@media (max-width: 720px) {
+  #courses .container {
+    margin: 50px auto;
+  }
+
+  #testimonials {
+    height: 230%;
+  }
 }
 
 @media (max-width: 376px) {
