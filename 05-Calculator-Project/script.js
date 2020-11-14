@@ -106,27 +106,23 @@ keys.addEventListener('click', e => {
 
 
     // -------------- CLEAR -------------- //
-    if (action === 'clear') {
-        if (key.textContent === 'AC') { 
+      if (action === 'clear') {
+        if (key.textContent === 'CE') { 
             calculator.dataset.firstValue = '' // hard reset
             calculator.dataset.modValue = ''
             calculator.dataset.operator = ''
             calculator.dataset.previousKeyType = ''
-        } else {
-            key.textContent = 'AC'
         }
 
+        key.textContent = 'AC'
         display.textContent = 0
         calculator.dataset.previousKeyType = 'clear' // tells if the previous key is clear
     } else {
-        const clearButton = document.querySelector('[data-action="clear"]')
+        const clearButton = document.querySelector('[data-action="clear"]') // if other keys are pressed, will change to CE
         clearButton.textContent = 'CE'
     }
 
-    // if (action !== 'clear') {
-    //     const clearButton = document.querySelector('[data-action="clear"]')
-    //     clearButton.textContent = 'CE'
-    // }
+    console.log('clear', calculator.dataset)
 
 
     // -------------- CALCULATE -------------- //
