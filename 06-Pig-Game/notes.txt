@@ -1,0 +1,10 @@
+ /*Math.random() creates a number between 0 - 0.9
+            The "*6" multiplies random number by 6 - This creates a number between 0 - 5
+            Example: 0.4 * 6 = 2.4
+            Math.floor() takes a decimal number and converts it into an integer 2.4 = 2
+            The +1 is then added to create a number between 1 - 6
+
+            Why not use Math.ceil?
+                Math.ceil(0) = 0
+                Math.floor(0) + 1 = 1
+            This is reason why we need to use Math.floor() + 1 instead of Math.ceil() here, when rolling a dice, you never ever supposed to get a 0 as outcome.*/
