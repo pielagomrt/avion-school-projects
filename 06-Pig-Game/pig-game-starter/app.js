@@ -156,16 +156,16 @@ function holdButton () {
         currentPlayerGlobalScore.textContent = globalScore[currentPlayer]; // shows accumulated global score
 
 	    if(globalScore[currentPlayer] >= threshold.value) { // threshold score
-            currentPlayerText.textContent = 'Winner!'; // Player's name changed to 'winner'
-            currentPlayerRoundScore.textContent = 0; // current score displays 0
-            dice.style.display = 'none';
-            
-            // game will stop
-            currentPlayerDiv.classList.add('winner');
-            currentPlayerDiv.classList.remove('active');
-            playGame = false;
+                currentPlayerText.textContent = 'Winner!'; // Player's name changed to 'winner'
+                currentPlayerRoundScore.textContent = 0; // current score displays 0
+                dice.style.display = 'none';
+                
+                // game will stop
+                currentPlayerDiv.classList.add('winner');
+                currentPlayerDiv.classList.remove('active');
+                playGame = false;
 	    } else {
-            nextPlayer(); // continue the game; switch to another player
+                nextPlayer(); // continue the game; switch to another player
 	    }
     }
 };
