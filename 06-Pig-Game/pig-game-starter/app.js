@@ -151,11 +151,11 @@ function holdButton () {
     let currentPlayerText = document.querySelector(`#name-${currentPlayer}`);
     let currentPlayerDiv = document.querySelector(`.player-${currentPlayer}-panel`);
      
-	if(playGame) {
+    if(playGame) {
         globalScore[currentPlayer] += roundScore; // score accumulation per hold 
         currentPlayerGlobalScore.textContent = globalScore[currentPlayer]; // shows accumulated global score
 
-		if(globalScore[currentPlayer] >= threshold.value) { // threshold score
+	    if(globalScore[currentPlayer] >= threshold.value) { // threshold score
             currentPlayerText.textContent = 'Winner!'; // Player's name changed to 'winner'
             currentPlayerRoundScore.textContent = 0; // current score displays 0
             dice.style.display = 'none';
