@@ -20,7 +20,7 @@ body {
       rgba(62, 20, 20, 0.4)
     ),
     url(back.jpg); /* changed */
-  background-size: cover;
+  background-size: contain; /* changed */
   background-position: center;
   font-family: Lato;
   font-weight: 300;
@@ -161,7 +161,7 @@ i {
 
 /* --------- MANUALLY ADDED --------- */
 input {
-  top: 516px;
+  top: 515px;
   width: 80px;
   left: 59%;
   color: #eb4d4d;
@@ -197,8 +197,8 @@ label {
 }
 
 .winner {
-  background: url(/winner.jpg); /* changed */
-  background-size: 500px 27.5em; /* changed */
+  background: url(winner.jpg); /* changed */
+  background-size: 500px 27.5em; /* added */
 }
 .winner .player-name {
   font-weight: bold; /* changed */

@@ -8,6 +8,8 @@ GAME RULES:
 - The first player to reach 100 points on GLOBAL score wins the game
 */
 
+
+
 /* ----------------------- global variables ----------------------- */ 
 let globalScore, roundScore, currentPlayer, playGame;
 /*********************************************************************/
@@ -40,7 +42,7 @@ newGame();
 /* ----------------------- executing functions -------------------- */
 document.querySelector('.btn-new').addEventListener('click', newGame);
 document.querySelector('.btn-roll').addEventListener('click', rollDice);
-document.querySelector('.btn-hold').addEventListener('click', holdScore);
+document.querySelector('.btn-hold').addEventListener('click', holdButton);
 /*********************************************************************/
 
 
@@ -82,10 +84,7 @@ function newGame () { // clear all records
     playGame = true; // game will start
 
     // entered value will be threshold
-    threshold.addEventListener('keypress', 
-        function () {
-            threshold.value;
-        });
+    threshold.addEventListener('keypress', function () { threshold.value; });
 
     // no threshold value upon refresh
     threshold.value = threshold.defaultValue;
@@ -102,7 +101,7 @@ function newGame () { // clear all records
     // no dice displayed initially
     dice.style.display = 'none';
     
-    // reset related line in function holdScore
+    // reset related line in function holdButton
     divPlayer1.classList.remove('active');
     divPlayer2.classList.remove('active');
 	divPlayer1.classList.remove('winner');
@@ -145,7 +144,7 @@ function rollDice () {
 /*********************************************************************/
 /* --------------------------- HOLD BUTTON --------------------------*/
 
-function holdScore () {
+function holdButton () {
 
     let currentPlayerGlobalScore = document.querySelector(`#score-${currentPlayer}`);
     let currentPlayerRoundScore = document.querySelector(`#current-${currentPlayer}`);
@@ -160,6 +159,7 @@ function holdScore () {
             currentPlayerText.textContent = 'Winner!'; // Player's name changed to 'winner'
             currentPlayerRoundScore.textContent = 0; // current score displays 0
             dice.style.display = 'none';
+            
             // game will stop
 			currentPlayerDiv.classList.add('winner');
             currentPlayerDiv.classList.remove('active');
