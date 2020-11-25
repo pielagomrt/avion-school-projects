@@ -90,9 +90,9 @@ function newGame () { // clear all records
     threshold.value = threshold.defaultValue;
 
     // need to set since html shows a non-zero number
-	globalScorePlayer1.textContent = '0';
-	globalScorePlayer2.textContent = '0';
-	roundScorePlayer1.textContent = '0';
+    globalScorePlayer1.textContent = '0';
+    globalScorePlayer2.textContent = '0';
+    roundScorePlayer1.textContent = '0';
     
     // to remove 'winner' text for the new game
     textPlayer1.textContent = 'Player 1';
@@ -104,7 +104,7 @@ function newGame () { // clear all records
     // reset related line in function holdButton
     divPlayer1.classList.remove('active');
     divPlayer2.classList.remove('active');
-	divPlayer1.classList.remove('winner');
+    divPlayer1.classList.remove('winner');
     divPlayer2.classList.remove('winner');
     
     // highlight on Player 1 by default
@@ -153,7 +153,7 @@ function holdButton () {
      
 	if(playGame) {
         globalScore[currentPlayer] += roundScore; // score accumulation per hold 
-		currentPlayerGlobalScore.textContent = globalScore[currentPlayer]; // shows accumulated global score
+        currentPlayerGlobalScore.textContent = globalScore[currentPlayer]; // shows accumulated global score
 
 		if(globalScore[currentPlayer] >= threshold.value) { // threshold score
             currentPlayerText.textContent = 'Winner!'; // Player's name changed to 'winner'
@@ -161,9 +161,9 @@ function holdButton () {
             dice.style.display = 'none';
             
             // game will stop
-			currentPlayerDiv.classList.add('winner');
+            currentPlayerDiv.classList.add('winner');
             currentPlayerDiv.classList.remove('active');
-			playGame = false;
+            playGame = false;
 		} else {
 			nextPlayer(); // continue the game; switch to another player
 		}
