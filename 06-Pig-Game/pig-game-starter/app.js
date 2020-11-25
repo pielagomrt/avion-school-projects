@@ -164,10 +164,10 @@ function holdButton () {
             currentPlayerDiv.classList.add('winner');
             currentPlayerDiv.classList.remove('active');
             playGame = false;
-		} else {
-			nextPlayer(); // continue the game; switch to another player
-		}
-	}
+	    } else {
+		    nextPlayer(); // continue the game; switch to another player
+	    }
+    }
 };
 /* ----------------------- End of HOLD BUTTON -----------------------*/
 /*********************************************************************/
