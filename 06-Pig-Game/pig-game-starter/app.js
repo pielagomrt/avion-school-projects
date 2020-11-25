@@ -165,7 +165,7 @@ function holdButton () {
             currentPlayerDiv.classList.remove('active');
             playGame = false;
 	    } else {
-		    nextPlayer(); // continue the game; switch to another player
+            nextPlayer(); // continue the game; switch to another player
 	    }
     }
 };
