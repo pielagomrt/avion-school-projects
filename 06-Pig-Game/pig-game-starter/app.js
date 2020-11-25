@@ -80,13 +80,13 @@ function newGame () { // clear all records
 
     globalScore= [0,0]; // global score
     roundScore = 0; // current score
-	currentPlayer = 0; // Player 1
+    currentPlayer = 0; // Player 1
     playGame = true; // game will start
 
     // entered value will be threshold
     threshold.addEventListener('keypress', function () { threshold.value; });
 
-    // no threshold value upon refresh
+    // html default value upon refresh
     threshold.value = threshold.defaultValue;
 
     // need to set since html shows a non-zero number
