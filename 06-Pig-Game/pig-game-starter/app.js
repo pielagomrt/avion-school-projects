@@ -15,6 +15,7 @@ let globalScore, roundScore, currentPlayer, playGame;
 /*********************************************************************/
 
 
+
 /* ------------------ assigning variables for html ----------------- */
 let totalScore = document.querySelectorAll('.player-score');
 let totalScoreP1 = document.querySelector('#score-0');
@@ -34,6 +35,7 @@ let dice = document.querySelector('.dice');
 
 let threshold = document.querySelector('#threshold'); // The input event fires when the value of an <input> element has been changed.
 /*********************************************************************/
+
 
 
 /*-------------------- determining current player ---------------------*/
@@ -79,20 +81,55 @@ function nextPlayer () {
     
     inactive(); // next player should be currently inactive(CSS)
     // reset current scores for both players before the next player's turn (not doing so would pass the accumulated score of previous player to the next player)
-    roundScore = 0 
+    roundScore = 0; 
 	for (let i of currentScore) {
         i.textContent = 0;
-    }
+    };
 }
 /*********************************************************************/
 
 
 
 /* ----------------------- executing functions -------------------- */
+document.querySelector('.btn-new').addEventListener('click', reload);
 document.querySelector('.btn-roll').addEventListener('click', rollDice);
 document.querySelector('.btn-hold').addEventListener('click', holdButton);
-document.querySelector('.btn-new').addEventListener('click', reload);
 /*********************************************************************/
+
+
+
+/*********************************************************************/
+/* ------------------------------- RESET ----------------------------*/
+function reload () { 
+    location.reload(); 
+    return false; // reloads the page using the browser’s cached data (if true, reloads the page from the server and does not store the data cached by the browser)
+};
+
+function newGame () { // clear all records
+
+    globalScore = [0,0]; // total score
+    roundScore = 0; // current score (if not set, first value will be NaN)
+    currentPlayer = 0; // Player 1
+    playGame = true; // game will start
+
+    // need to set since html shows a non-zero number
+    for (let i of totalScore) {
+        i.textContent = 0;
+    };
+
+    for (let i of currentScore) {
+        i.textContent = 0;
+    };
+   
+    // no dice displayed initially
+    dice.style.display = 'none';
+};
+
+newGame(); // self-executing on page load
+
+/* --------------------------- End of RESET -------------------------*/
+/*********************************************************************/
+
 
 
 /*********************************************************************/
@@ -108,7 +145,7 @@ function rollDice () {
             nextPlayer();
             dice.style.display = 'none'; // dice-1 will not be displayed
         } else {
-            roundScore += diceNum; // score accumulation per dice rolling
+            roundScore += diceNum; // score accumulation per dice roll
             playerTextContent(currentScoreP1, currentScoreP2, roundScore); // displays accumulated current score
         }
     }
@@ -136,46 +173,6 @@ function holdButton () {
                 nextPlayer(); // continue the game; switch to another player
 	    }
     }
-
 };
 /* ----------------------- End of HOLD BUTTON -----------------------*/
-/*********************************************************************/
-
-
-
-/*********************************************************************/
-/* ------------------------------- RESET ----------------------------*/
-function reload () { 
-    location.reload(); 
-    return false; // reloads the page using the browser’s cached data (if true, reloads the page from the server and does not store the data cached by the browser)
-};
-/* --------------------------- End of RESET -------------------------*/
-/*********************************************************************/
-
-
-/*********************************************************************/
-/* ------------------------- NEW GAME BUTTON ------------------------*/
-function newGame () { // clear all records
-
-    globalScore = [0,0]; // total score
-    roundScore = 0; // current score (if not set, first value will be NaN)
-    currentPlayer = 0; // Player 1
-    playGame = true; // game will start
-
-    // need to set since html shows a non-zero number
-    for (let i of totalScore) {
-        i.textContent = 0;
-    };
-
-    for (let i of currentScore) {
-        i.textContent = 0;
-    };
-   
-    // no dice displayed initially
-    dice.style.display = 'none';   
-};
-
-newGame(); // self-executing on page load
-
-/* --------------------- End of NEW GAME BUTTON ---------------------*/
 /*********************************************************************/
