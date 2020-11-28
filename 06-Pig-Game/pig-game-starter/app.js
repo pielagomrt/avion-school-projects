@@ -49,7 +49,7 @@ function playerTextContent (player1, player2, value) {
     }
 }
 
-//changing CSS depending on the current player
+//changing CSS, call inside nextPlayer();
 function inactive () {
     if (currentPlayer === 0) {
         divP1.classList.add('active'); 
@@ -81,7 +81,7 @@ function nextPlayer () {
     
     inactive(); // next player should be currently inactive(CSS)
     // reset current scores for both players before the next player's turn (not doing so would pass the accumulated score of previous player to the next player)
-    roundScore = 0; 
+    roundScore = 0;
 	for (let i of currentScore) {
         i.textContent = 0;
     };
@@ -161,7 +161,7 @@ function holdButton () {
      
     if(playGame) {
         globalScore[currentPlayer] += roundScore; // score accumulation per hold 
-        playerTextContent(totalScoreP1, totalScoreP2,globalScore[currentPlayer]); // shows accumulated global score
+        playerTextContent(totalScoreP1, totalScoreP2, globalScore[currentPlayer]); // shows accumulated global score
 
 	    if(globalScore[currentPlayer] >= threshold.value) { // threshold score
                 playerTextContent(textP1, textP2, 'Winner!'); // Player's name changed to 'winner'
