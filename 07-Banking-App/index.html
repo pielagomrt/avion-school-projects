@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Banking App</title>
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- BANK NAME -->
+    <h1 id="bank-name"></h1>
+
+    <!-- REGISTRATION -->
+    <div id="registration">
+
+        <h3 id="reg-text">New User?<br><small>Please register below.</small></h3>
+
+        <form id="reg-form"><br>
+            <!-- NAME -->
+            <label id="label-name">Name:</label><br>
+            <input type="text" id="customer-name"><br>
+
+            <!-- PASSWORD -->
+            <label id="label-password">Password:</label><br>
+            <input type="password" id="password"><br>
+
+            <!-- CONFIRM PASSWORD -->
+            <label id="label-confirm-password">Confirm password:</label><br>
+            <input type="password" id="confirm-password"> <br><br>
+
+            <!-- REGISTER BUTTON -->
+            <input type="button" value="Register" id="reg-btn">
+        </form>
+
+    </div>
+    <!-- END OF REGISTRATION -->
+
+    <!-- CUSTOMER ACCOUNT -->
+    <div id="customer-account">
+
+        <div class="info-container">
+
+            <!-- ACCOUNT INFO -->
+            <div id='display'>
+                <h2 id="display-name"></h2>
+                <img src="pic.jpg"><br>
+                <input type="button" id="logout" value="Logout">
+            </div>
+            <!-- END OF ACCOUNT INFO -->
+
+            <!-- TRANSACTIONS INPUT -->
+            <div id="transactions">
+
+                <form id="transaction-form"><br>
+
+                    <!-- TRANSACTION TYPE -->
+                    Select transaction:<br><br>
+                    <select name="transaction-type" id="transaction-type" class="trans-type">
+                        <option value="Deposit">Deposit</option>
+                        <option value="Withdraw">Withdraw</option>
+                    </select><br><br>
+                    
+                    <!-- TRANSACTION AMOUNT -->
+                    Enter amount:<br><br>
+                    <input type="number" name="transaction-amount" id="transaction-amount" class="transaction" step="0.01"><br><br>
+                    
+                    <!-- SUBMIT BUTTON -->
+                    <input type="button" value="Submit" id="submit-transaction" 
+                        class="submit-trans">
+                        
+                </form>
+
+            </div>
+            <!-- END OF TRANSACTIONS INPUT -->
+
+        </div><br>
+        
+        <!-- TRANSACTION HISTORY -->
+        <div class="table-container">
+
+            <table id="transaction-table">
+
+                <!-- COLUMN HEADINGS -->
+                <tr class="column-headings">
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Balance</th>
+                </tr>
+                <!-- END OF COLUMN HEADINGS -->
+
+                <!-- BEGINNING BALANCE -->
+                <tr>
+                    <td colspan="2" id="bal-beg">Beginning Balance</th>
+                    <td>0</th>
+                </tr>
+                <!-- END OF BEGINNING BALANCE -->
+
+                <!-- CURRENT BALANCE -->
+                <tr>
+                    <td colspan="2" id="bal-end"><b>Current Balance</b></td>
+                    <td id="bal-end-val"><b>0</b></td>
+                </tr>
+                <!-- END OF CURRENT BALANCE -->
+
+            </table>
+
+        </div>
+        <!-- END OF TRANSACTION HISTORY -->
+
+    </div>
+    <!-- END OF CUSTOMER ACCOUNT -->
+
+</body>
+
+</html>
+<script src="script.js"></script>

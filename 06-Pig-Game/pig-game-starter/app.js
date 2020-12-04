@@ -21,7 +21,7 @@ let textP2 = document.querySelector('#name-1');
 let divP1 = document.querySelector('.player-0-panel');
 let divP2 = document.querySelector('.player-1-panel');
 let dice = document.querySelector('.dice');
-let threshold = document.querySelector('#threshold'); // The input event fires when the value of an <input> element has been changed.
+let threshold = document.querySelector('#threshold'); // the input event fires when the value of an <input> element has been changed
 /*********************************************************************/
 /*-------------------- determining current player ---------------------*/
 // changing text content depending on the current player
@@ -121,7 +121,7 @@ function holdButton () {
         globalScore[currentPlayer] += roundScore; // score accumulation per hold 
         playerTextContent(totalScoreP1, totalScoreP2, globalScore[currentPlayer]); // shows accumulated global score
 	    if(globalScore[currentPlayer] >= threshold.value) { // threshold score
-                playerTextContent(textP1, textP2, 'Winner!'); // Player's name changed to 'winner'
+                playerTextContent(textP1, textP2, 'Winner!'); // player's name changed to 'winner'
                 playerTextContent(currentScoreP1, currentScoreP2, 0); // current score displays 0
                 winnerCSS(divP1, divP2); // apply CSS
                 dice.style.display = 'none';

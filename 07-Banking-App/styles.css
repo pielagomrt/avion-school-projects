@@ -1,0 +1,207 @@
+body {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+  height: 100%;
+  font-family: "Questrial", sans-serif;
+}
+
+#bank-name {
+  margin-left: 41%;
+  margin-top: 3%;
+}
+
+/* ----- BUTTONS ----- */
+
+input[type="button"] {
+  padding: 7px 10px;
+  width: 50%;
+  border-radius: 5px;
+  border: 2px solid maroon;
+  color: maroon;
+  background: #ffc83d;
+  font-weight: bold;
+  font-family: "Questrial", sans-serif;
+}
+
+input[type="button"]:hover {
+  color: #ffc83d;
+  border: 2px solid #ffc83d;
+  background-color: maroon;
+}
+
+input[type="button"]:focus {
+  outline: none;
+}
+
+/* ----- END OF BUTTONS ----- */
+
+/****************************/
+/* ----- REGISTRATION ----- */
+
+#registration {
+  width: 20%;
+  margin: auto;
+  margin-top: 120px;
+}
+
+#reg-text {
+  text-align: center;
+}
+
+#reg-form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+#reg-form label {
+  margin-left: 20px;
+}
+
+#reg-form input {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  outline: none;
+}
+
+#reg-btn {
+  width: 250px;
+  font-size: 15px;
+}
+
+/* ----- END OF REGISTRATION ----- */
+/***********************************/
+
+/********************************/
+/* ----- CUSTOMER ACCOUNT ----- */
+/********************************/
+
+#customer-account {
+  width: 50%;
+  margin: auto;
+  margin-top: 80px;
+  /* text-align: center; */
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* -----ACCOUNT INFO ----- */
+
+#display {
+  /* border: 2px solid black; */
+  text-align: center;
+  margin: auto;
+  margin-right: -10%;
+  margin-top: 3.5%;
+}
+
+img {
+  width: 150px;
+  border-radius: 5px;
+  border: 5px solid cornsilk;
+}
+
+#logout {
+  border: 2px solid gray;
+  color: black;
+  background: transparent;
+  font-size: 12px;
+  padding: 3px;
+  width: 30%;
+  margin-top: 5px;
+}
+
+#logout:hover {
+  background-color: gray;
+  color: white;
+}
+
+/* ----- END OF ACCOUNT INFO ----- */
+
+/* ----- TRANSACTIONS INPUT----- */
+
+#transactions {
+  margin: auto;
+  text-align: center;
+}
+
+#transaction-form {
+  text-align: left;
+  margin-top: 47px;
+  font-size: 17px;
+  background-color: cornsilk;
+  padding-left: 44px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+}
+
+.trans-type {
+  width: 75%;
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+#transaction-amount {
+  width: 67%;
+  padding: 5px;
+  padding-left: 8px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  font-size: 15px;
+  outline: none;
+}
+
+#submit-transaction {
+  margin-left: 24px;
+}
+
+/* ----- END OF TRANSACTIONS INPUT ----- */
+
+/* ----- TRANSACTION HISTORY ----- */
+
+.table-container {
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
+table {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  width: 70%;
+  margin: auto;
+  line-height: 30px;
+  padding: 10px 20px;
+}
+
+td {
+  text-align: right;
+}
+
+th {
+  background-color: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#bal-beg,
+#bal-end {
+  text-align: left;
+}
+
+#bal-end-val {
+  font-weight: bold;
+}
+
+/* ----- END OF TRANSACTION HISTORY ----- */
+
+/***************************************/
+/* ----- END OF CUSTOMER ACCOUNT ----- */
+/***************************************/
