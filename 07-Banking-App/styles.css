@@ -1,9 +1,12 @@
+* {
+  font-family: "Questrial", sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
   margin-bottom: 50px;
   height: 100%;
-  font-family: "Questrial", sans-serif;
 }
 
 #bank-name {
@@ -21,7 +24,6 @@ input[type="button"] {
   color: maroon;
   background: #ffc83d;
   font-weight: bold;
-  font-family: "Questrial", sans-serif;
 }
 
 input[type="button"]:hover {
@@ -55,19 +57,13 @@ input[type="button"]:focus {
   margin: 10px;
 }
 
-#reg-form label {
-  margin-left: 20px;
-}
-
 #reg-form input {
-  margin-left: 20px;
-  margin-right: 20px;
   padding: 10px;
   outline: none;
 }
 
 #reg-btn {
-  width: 250px;
+  width: 290px;
   font-size: 15px;
 }
 
