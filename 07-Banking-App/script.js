@@ -4,6 +4,8 @@ let currentBalance = document.querySelector("#bal-end-val");
 let customerAccount = document.querySelector('#customer-account');
 let logoutBtn = document.querySelector('#logout');
 let newUser = document.querySelector('#customer-name');
+let newUserPassword = document.querySelector('#password');
+let newUserConfirmPassword = document.querySelector('#confirm-password');
 let registration = document.querySelector("#registration");
 let registrationBtn = document.querySelector("#reg-btn");
 let submitBtn = document.querySelector("#submit-transaction");
@@ -17,11 +19,17 @@ let transactionTable = document.querySelector("#transaction-table");
 registrationBtn.addEventListener("click", toggleCustomerAccount);
 registrationBtn.addEventListener("click", displayCustomerAccount);
 registrationBtn.addEventListener("click", () => { hideToggle(registration); });
+registrationBtn.addEventListener("click", registerHere);
 submitBtn.addEventListener("click", () => { checkTransaction(); });
+submitBtn.addEventListener("click", submitHere);
 logoutBtn.addEventListener('click', logoutFunction);
 /********************************************************************/
 
-/************************* REUSABLE FUNCTIONS ***********************/
+
+/********************************************************************/
+/***************************** DISPLAY ******************************/
+
+/************************** REUSABLE FUNCTIONS **********************/
 // Clears element html
 function clearValues(elementID) { 
     document.getElementById(elementID).value = "";
@@ -54,7 +62,6 @@ function addTransaction(table, account) {
     }
 }
 /********************************************************************/
-
 
 let account = {
     balance: 0,
@@ -115,7 +122,7 @@ function withdrawFunction() {
                 displayValues();
                 addTransaction(transactionTable, account);
             } else {
-                alert("Not enough funds for transaction.")
+                alert("Not enough funds for the transaction.")
             }
     }  
 }
@@ -146,8 +153,127 @@ function displayCustomerAccount () {
 function logoutFunction () {
     customerAccount.style.display ='none';
     registration.style.display = 'block';
+    newUser.value = '';
+    newUserPassword.value = '';
+    newUserConfirmPassword.value = '';
+}
+
+/********************************************************************/
+/************************* REQUIRED FUNCTIONS ***********************/
+
+let accountHolders = [];
+
+let User = function (name, password) {
+    this.name = name;
+    this.password = password;
+    this.amount = 0;
+    this.depositThis = function (amount) {
+        this.amount += amount;
+    }
+    this.withdrawThis = function (amount) {
+        this.amount -= amount;
+    };
+};
+
+/*------------------------create_user (user)------------------------*/
+function createUser (name, password) {
+    let user = accountHolders.some(u => u.name == name);
+    if (user === true) {
+        console.log('%c User already exists! ', 'background: red; color: yellow')
+    } else {
+        let createNewUser = new User(name, password);
+        accountHolders.push(createNewUser);
+    }
+};
+
+function registerHere () {
+    let letters = /^[A-Za-z]+$/;
+    if(newUser.value.match(letters)) {
+        createUser(newUser.value, newUserPassword.value);
+    } else {
+        alert('Please enter alphabet characters only');
+        console.log('%c WRONG ARGUMENTS! ', 'color: red; font-weight: bold');
+        customerAccount.style.display = 'none';
+        registration.style.display ="block";
+    }
+ }
+
+// validation
+function userExists(name) {
+    let user = accountHolders.some(u => u.name == name);
+    if (user === true) {
+        console.log('%c User already exists! ', 'background: red; color: yellow')
+    } else {
+        console.log('%c User does not exist! ', 'background: yellow; color: red')
+    }
+};
+
+
+/*------------deposit (user, amount) / withdraw (user, amount)-----------*/
+function deposit(name, amount) {
+    let user = accountHolders.find(u => u.name === name);
+    user.depositThis(amount);
+    return user.amount
+}
+
+function withdraw(name, amount) {
+    let user = accountHolders.find(u => u.name === name);
+    user.withdrawThis(amount);
+    return user.amount
+}
+
+function submitHere () {
+     if (transactionType.value === "Deposit") {
+        deposit(newUser.value, account.allTransactions[account.allTransactions.length - 1].amount);
+    } else if (transactionType.value === "Withdraw") {
+        withdraw(newUser.value, account.allTransactions[account.allTransactions.length - 1].amount);
+    } 
+}
+
+/*------------------send (from_user, to_user, amount)--------------------*/
+function send (from_name, to_name, amount) {
+    let sender = accountHolders.find(u => u.name === from_name);
+    let senderExists = accountHolders.some(u => u.name === from_name);
+    let receiver = accountHolders.find(u => u.name === to_name);
+    let receiverExists = accountHolders.some(u => u.name === to_name);
+
+
+    if (senderExists === true && receiverExists === true) {
+        sender.withdrawThis(amount);
+        receiver.depositThis(amount);
+    } else if (senderExists === false && receiverExists === true) { 
+        console.log('%c SENDER does not exist!', 'color: red')
+    } else if (receiverExists === false && senderExists === true) {
+        console.log('%c RECEIVER does not exist!', 'color: red')
+    } 
+}
+
+/*-------------------------get_balance (user)-----------------------------*/
+function getBalance (name) {
+    let user = accountHolders.find(u => u.name === name);
+    return user.amount;
 }
 
 
+console.log(accountHolders);
 
+/*********************** VALIDATION ****************************/
+
+
+// function enterPassword () {
+//     if (newUserPassword.value.length <=0) {
+//         alert('Please enter your password.')
+//         console.log('wrong_arguments')
+//         customerAccount.style.display = 'none';
+//         registration.style.display ="block";
+//     } else if (newUserConfirmPassword.value !== newUserPassword.value) {
+//         alert('Passwords are not matching.')
+//         console.log('wrong_arguments')
+//         customerAccount.style.display = 'none';
+//         registration.style.display ="block";
+//     } else {
+//         customerAccount.style.display = 'block';
+//         registration.style.display ="none";
+//     }
+// }
 
