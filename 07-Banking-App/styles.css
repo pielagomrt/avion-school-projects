@@ -7,7 +7,9 @@ body {
   padding: 0;
   margin-bottom: 50px;
   height: 100%;
-  background: url(bg.png);
+  background: url(img/bg.png);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 #bank-logo {
@@ -16,7 +18,7 @@ body {
 }
 
 #bank-logo-pic {
-  margin-top: 50px;
+  margin-top: 70px;
   width: 70px;
   border: none;
 }
@@ -25,6 +27,21 @@ body {
   margin: auto;
   margin-top: 1%;
   text-align: center;
+}
+
+#bank-site {
+  margin: auto;
+  margin-top: 1%;
+  text-align: center;
+  color: brown;
+  font-size: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  outline: none;
 }
 
 /* ----- BUTTONS ----- */
@@ -44,6 +61,7 @@ input[type="button"]:hover {
   border: 2px solid #ffc83d;
   background-color: maroon;
   transition: all 200ms ease-in-out;
+  cursor: pointer;
 }
 
 input[type="button"]:focus {
@@ -53,28 +71,102 @@ input[type="button"]:focus {
 /* ----- END OF BUTTONS ----- */
 
 /****************************/
-/* ----- REGISTRATION ----- */
+/* ----- LOGIN ----- */
 
-#registration {
-  width: 300px;
+#login {
+  width: 350px;
   margin: auto;
   margin-top: 50px;
   background-color: navajowhite;
   border: 2px solid goldenrod;
   border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 8px 8px 0px;
+  /* display: none; */
+}
+
+#login-text {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0;
+  color: maroon;
+  font-size: 22px;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
   padding: 20px;
   padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+  padding: 10px;
+  border: 1px solid lightgray;
+}
+
+#login-btn {
+  margin: auto;
+  margin-top: 5%;
+  width: 100%;
+  font-size: 15px;
+  padding: 10px;
+}
+
+#login p {
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 0;
+}
+
+#login a {
+  color: maroon;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#login a:hover {
+  text-decoration: underline;
+}
+
+/* ----- END OF LOGIN ----- */
+/***********************************/
+
+/****************************/
+/* ----- REGISTRATION ----- */
+
+#registration {
+  width: 350px;
+  margin: auto;
+  margin-top: 50px;
+  background-color: brown;
+  border: 2px solid goldenrod;
+  border-radius: 10px;
+  padding: 10px 20px;
+  padding-top: 10px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 8px 8px 0px;
+  display: none;
 }
 
 #reg-text {
   text-align: center;
+  color: lightgoldenrodyellow;
+  margin-bottom: 15px;
+  font-weight: 100;
+  font-size: 140%;
 }
 
 #reg-form {
   display: flex;
   flex-direction: column;
   margin: 10px;
+  margin-top: 0;
+  padding: 20px;
+  padding-top: 0;
+  color: navajowhite;
 }
 
 #reg-form input {
@@ -86,6 +178,26 @@ input[type="button"]:focus {
   margin: auto;
   width: 100%;
   font-size: 15px;
+  background-color: goldenrod;
+}
+
+#reg-btn:hover {
+  background-color: gold;
+  color: maroon;
+  border: 2px solid maroon;
+}
+
+#registration a {
+  text-align: center;
+  margin-top: 15px;
+  color: navajowhite;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#registration a:hover {
+  text-decoration: underline;
 }
 
 /* ----- END OF REGISTRATION ----- */
@@ -105,6 +217,7 @@ input[type="button"]:focus {
   border-radius: 10px;
   padding-bottom: 50px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 8px 8px 0px;
+  display: none;
 }
 
 .info-container {
@@ -119,18 +232,18 @@ input[type="button"]:focus {
   text-align: center;
   margin: auto;
   margin-right: -10%;
-  margin-top: 3.5%;
+  margin-top: 40px;
 }
 
 img {
-  width: 150px;
+  width: 170px;
   border-radius: 5px;
-  border: 5px solid cornsilk;
+  border: 5px solid lightgoldenrodyellow;
 }
 
 #logout {
   border: 2px solid gray;
-  color: black;
+  color: gray;
   background: transparent;
   font-size: 12px;
   padding: 3px;
@@ -153,12 +266,14 @@ img {
 }
 
 #transaction-form {
+  height: 50%;
   text-align: left;
   margin-top: 47px;
-  font-size: 17px;
+  font-size: 15px;
   background-color: cornsilk;
   padding-left: 44px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 30px;
   border-radius: 10px;
 }
 
@@ -168,6 +283,15 @@ img {
   padding: 5px;
   border-radius: 5px;
   border: 1px solid lightgray;
+}
+
+#transfer-text {
+  /* visibility: hidden; */
+  display: none;
+  margin-top: 10px;
+  padding: 5px;
+  width: 67%;
+  font-size: 12px;
 }
 
 #transaction-amount {
@@ -195,8 +319,8 @@ img {
 }
 
 table {
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  border-top: 3px solid maroon;
+  border-bottom: 3px solid maroon;
   width: 70%;
   margin: auto;
   line-height: 30px;
@@ -205,6 +329,7 @@ table {
 
 td {
   text-align: right;
+  font-size: 20px;
 }
 
 th {

@@ -17,10 +17,36 @@
 <body>
 
     <div id="bank-logo">
-        <img id="bank-logo-pic" src="logo.png">
+        <img id="bank-logo-pic" src="img/logo.png">
     </div>
     <!-- BANK NAME -->
     <h1 id="bank-name">BANK OF THE PACIFIC ISLANDS</h1>
+
+    <h3 id="bank-site">WELCOME TO ONLINE BANKING</h3>
+
+    <!-- LOGIN -->
+    <div id="login">
+    
+        <h3 id="login-text">SECURE LOGIN</h3>
+    
+        <form id="login-form"><br>
+            <!-- NAME -->
+            <label id="label-name-login">Name:</label><br>
+            <input type="text" id="customer-name-login"><br>
+    
+            <!-- PASSWORD -->
+            <label id="label-password-login">Password:</label><br>
+            <input type="password" id="password-login"><br>
+    
+            <!-- LOGIN BUTTON -->
+            <input type="button" value="LOGIN" id="login-btn">
+
+            <!-- REGISTRATION LINK -->
+            <p>Not registered? <a href="#" id="reg-link">Click here.</a></p>
+        </form>
+    
+    </div>
+    <!-- END OF LOGIN -->
 
     <!-- REGISTRATION -->
     <div id="registration">
@@ -41,8 +67,14 @@
             <input type="password" id="confirm-password"> <br><br>
 
             <!-- REGISTER BUTTON -->
-            <input type="button" value="Register" id="reg-btn">
+            <input type="button" value="REGISTER" id="reg-btn">
+
+            <!-- BACK TO LOGIN -->
+            <a href="#" id="reg-to-login">BACK TO LOGIN</a>
+
         </form>
+
+        
 
     </div>
     <!-- END OF REGISTRATION -->
@@ -54,9 +86,10 @@
 
             <!-- ACCOUNT INFO -->
             <div id='display'>
-                <h2 id="display-name"></h2>
-                <img src="pic.jpg"><br>
+                <h2 id="display-name">ACCOUNT NAME</h2>
+                <img src="img/pic.png"><br>
                 <input type="button" id="logout" value="Logout">
+                <!-- <p id="current-bal-display"></p> -->
             </div>
             <!-- END OF ACCOUNT INFO -->
 
@@ -70,7 +103,8 @@
                     <select name="transaction-type" id="transaction-type" class="trans-type">
                         <option value="Deposit">Deposit</option>
                         <option value="Withdraw">Withdraw</option>
-                        <!-- <option value="Transfer">Transfer</option> -->
+                        <option value="Transfer">Transfer</option>
+                        <input type="text" id="transfer-text" placeholder="Receiver's Name">
                     </select><br><br>
                     
                     <!-- TRANSACTION AMOUNT -->
@@ -78,7 +112,7 @@
                     <input type="number" name="transaction-amount" id="transaction-amount" class="transaction" step="0.01"><br><br>
                     
                     <!-- SUBMIT BUTTON -->
-                    <input type="button" value="Submit" id="submit-transaction" 
+                    <input type="button" value="SUBMIT" id="submit-transaction" 
                         class="submit-trans">
                         
                 </form>
@@ -92,25 +126,25 @@
         <div class="table-container">
 
             <table id="transaction-table">
-
+                
                 <!-- COLUMN HEADINGS -->
-                <tr class="column-headings">
+                <!-- <tr class="column-headings">
                     <th>Description</th>
                     <th>Amount</th>
                     <th>Balance</th>
-                </tr>
+                </tr> -->
                 <!-- END OF COLUMN HEADINGS -->
 
                 <!-- BEGINNING BALANCE -->
-                <tr>
-                    <td colspan="2" id="bal-beg">Beginning Balance</th>
-                    <td>0</th>
-                </tr>
+                <!-- <tr>
+                    <td colspan="2" id="bal-beg">Beginning Balance</td>
+                    <td>0</td>
+                </tr> -->
                 <!-- END OF BEGINNING BALANCE -->
 
                 <!-- CURRENT BALANCE -->
                 <tr>
-                    <td colspan="2" id="bal-end"><b>Current Balance</b></td>
+                    <td colspan="2" id="bal-end"><b>CURRENT BALANCE</b></td>
                     <td id="bal-end-val"><b>0</b></td>
                 </tr>
                 <!-- END OF CURRENT BALANCE -->
