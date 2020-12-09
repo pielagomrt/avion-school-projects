@@ -58,7 +58,7 @@ let User = function (name, password) {
 
 /*------------------------create_user (user)------------------------*/
 function createUser (name, password) {
-    let user = accountHolders.some(u => u.name == name);
+    let user = accountHolders.some(u => u.name == name); // "find" returns a value, "some" returns a boolean
     if (user === true) {
         console.log('%c User already exists! ', 'background: red; color: yellow')
         alert('Account is already registered.')
@@ -108,7 +108,7 @@ function registerLink () {
 
 // for accessing an account by clicking the 'login' button
 function accountLogin (name) {
-    let user = accountHolders.some(u => u.name == name); // "find" returns a value, "some" returns a boolean
+    let user = accountHolders.some(u => u.name == name); 
     if (user === true) {
         customerAccount.style.display = "block";
         login.style.display = "none";
@@ -162,10 +162,10 @@ function send (from_name, to_name, amount) {
         receiver.depositThis(amount);
         alert('You have successfully transferred funds to another account.')
     } else if (receiverExists === false) {
-        console.log('%c RECEIVER does not exist!', 'background: yellow; color: red')
+        console.log('%c RECEIVER does not exist!', 'background: white; color: red')
         alert('RECEIVER does not exist');
     } else if (senderExists === false) {
-        console.log('%c SENDER does not exist!', 'background: yellow; color: red')
+        console.log('%c SENDER does not exist!', 'background: white; color: red')
         alert('SENDER does not exist');
     }
 }
