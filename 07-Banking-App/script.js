@@ -22,7 +22,6 @@ let transactionType = document.querySelector("#transaction-type")
 let transferInputText = document.querySelector('#transfer-text'); 
 let transactionTable = document.querySelector("#transaction-table");
 /*******************************************************************/
-
 /************************* EVENT LISTENERS *************************/
 registrationLink.addEventListener("click", registerLink);
 registrationBtn.addEventListener("click", registerHere);
@@ -32,13 +31,9 @@ loginLink.addEventListener('click', logoutFunction);
 logoutBtn.addEventListener('click', logoutFunction);
 transactionType.addEventListener("click", toggleTransferText);
 /********************************************************************/
-
-
 /********************************************************************/
 /************************* REQUIRED FUNCTIONS ***********************/
-
 let accountHolders = [];
-
 let User = function (name, password) {
     this.name = name;
     this.password = password;
@@ -55,7 +50,6 @@ let User = function (name, password) {
         }
     };
 }
-
 /*------------------------create_user (user)------------------------*/
 function createUser (name, password) {
     let user = accountHolders.some(u => u.name == name); // "find" returns a value, "some" returns a boolean
@@ -73,7 +67,6 @@ function createUser (name, password) {
         alert('REGISTRATION SUCCESSFUL')
     }
 };
-
 // for creating a new account by clicking the 'register' button
 function registerHere () {
     let letters = /^[A-Za-z]+$/;
@@ -91,7 +84,6 @@ function registerHere () {
         newUserConfirmPassword.value = "";
     }
 }
-
 // to show registration div by clicking the link on the login div
 function registerLink () {
     if (registration.style.display = "none") {
@@ -105,7 +97,6 @@ function registerLink () {
         registration.style.display ="none";
     }
 }
-
 // for accessing an account by clicking the 'login' button
 function accountLogin (name) {
     let user = accountHolders.some(u => u.name == name); 
@@ -121,40 +112,33 @@ function accountLogin (name) {
         loginPassword.value = '';
     }
 };
-
-
 // to display the login div through either 'logout' button or 'back to login' link
 function logoutFunction () {
     customerAccount.style.display ='none';
     registration.style.display = 'none';
     login.style.display = 'block';
-    newUser.value = '';
+    newUser.value = "";
     newUserPassword.value = '';
     newUserConfirmPassword.value = '';
     loginName.value = '';
     loginPassword.value = '';
 }
-
-
 /*------------deposit (user, amount) / withdraw (user, amount) / send (from_user, to_user, amount)-----------*/
 function deposit(name, amount) {
     let user = accountHolders.find(u => u.name === name);
     user.depositThis(amount);
     return user.amount
 }
-
 function withdraw(name, amount) {
     let user = accountHolders.find(u => u.name === name);
     user.withdrawThis(amount);
     return user.amount
 }
-
 function send (from_name, to_name, amount) {
     let sender = accountHolders.find(u => u.name === from_name);
     let senderExists = accountHolders.some(u => u.name === from_name);
     let receiver = accountHolders.find(u => u.name === to_name);
     let receiverExists = accountHolders.some(u => u.name === to_name);
-
     if (sender === receiver) {
         alert('Cannot transfer to own account');
     } else if (receiverExists === true) {
@@ -169,7 +153,6 @@ function send (from_name, to_name, amount) {
         alert('SENDER does not exist');
     }
 }
-
 // execute depending on type of transaction
 function transaction () {
     if (transactionType.value === "Deposit") {
@@ -185,7 +168,6 @@ function transaction () {
     transferInputText.value = "";
     currentBalance.textContent = numberWithCommas(getBalance(loginName.value));
 }
-
 // shows input box when 'transfer' is selected
 function toggleTransferText() {
     if (transactionType.value === "Transfer") {
@@ -196,19 +178,12 @@ function toggleTransferText() {
         transferInputText.style.display = "none";
     }
 }
-
 function numberWithCommas(amount) {
     return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
-
 /*-------------------------get_balance (user)-----------------------------*/
 function getBalance (name) {
     let user = accountHolders.find(u => u.name === name);
     return user.amount;
 }
-
-
-
-
-
 console.log(accountHolders);
