@@ -117,7 +117,7 @@ function logoutFunction () {
     customerAccount.style.display ='none';
     registration.style.display = 'none';
     login.style.display = 'block';
-    newUser.value = "";
+    // newUser.value = "";
     newUserPassword.value = '';
     newUserConfirmPassword.value = '';
     loginName.value = '';
