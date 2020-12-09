@@ -26,7 +26,7 @@ let transactionTable = document.querySelector("#transaction-table");
 /************************* EVENT LISTENERS *************************/
 registrationLink.addEventListener("click", registerLink);
 registrationBtn.addEventListener("click", registerHere);
-submitBtn.addEventListener("click",transactionLogin);
+submitBtn.addEventListener("click",transaction);
 loginBtn.addEventListener("click", () => { accountLogin(loginName.value) });
 loginLink.addEventListener('click', logoutFunction);
 logoutBtn.addEventListener('click', logoutFunction);
@@ -61,7 +61,7 @@ function createUser (name, password) {
     let user = accountHolders.some(u => u.name == name);
     if (user === true) {
         console.log('%c User already exists! ', 'background: red; color: yellow')
-        alert('Bank Account is already registered.')
+        alert('Account is already registered.')
         customerAccount.style.display = "none";
         registration.style.display ="block";
         newUser.value ="";
@@ -70,17 +70,17 @@ function createUser (name, password) {
     } else {
         let createNewUser = new User(name, password);
         accountHolders.push(createNewUser);
+        alert('REGISTRATION SUCCESSFUL')
     }
 };
 
-// registration
+// for creating a new account by clicking the 'register' button
 function registerHere () {
     let letters = /^[A-Za-z]+$/;
     if(newUser.value.match(letters) && newUserPassword.value === newUserConfirmPassword.value && newUserPassword.value.length > 0) {
         createUser(newUser.value, newUserPassword.value);
         login.style.display = "block";
         registration.style.display = "none";
-        alert('REGISTRATION SUCCESSFUL')    
     } else {
         alert('Passwords are not matching.');
         console.log('%c WRONG ARGUMENTS! ', 'color: red; font-weight: bold');
@@ -92,19 +92,23 @@ function registerHere () {
     }
 }
 
+// to show registration div by clicking the link on the login div
 function registerLink () {
     if (registration.style.display = "none") {
         registration.style.display = "block";
         customerAccount.style.display = "none";
         login.style.display = "none";
-
+        newUser.value ="";
+        newUserPassword.value = "";
+        newUserConfirmPassword.value = "";
     } else {
         registration.style.display ="none";
     }
 }
 
+// for accessing an account by clicking the 'login' button
 function accountLogin (name) {
-    let user = accountHolders.some(u => u.name == name);
+    let user = accountHolders.some(u => u.name == name); // "find" returns a value, "some" returns a boolean
     if (user === true) {
         customerAccount.style.display = "block";
         login.style.display = "none";
@@ -112,14 +116,14 @@ function accountLogin (name) {
         currentBalance.textContent = numberWithCommas(getBalance(loginName.value)); 
     } else {
         console.log('%c User does not exist! ', 'background: yellow; color: red')
-        alert('Bank account not registered.');
+        alert('Account not registered.');
         loginName.value = '';
         loginPassword.value = '';
     }
 };
 
 
-// for execution on click (logout)
+// to display the login div through either 'logout' button or 'back to login' link
 function logoutFunction () {
     customerAccount.style.display ='none';
     registration.style.display = 'none';
@@ -166,8 +170,8 @@ function send (from_name, to_name, amount) {
     }
 }
 
-
-function transactionLogin () {
+// execute depending on type of transaction
+function transaction () {
     if (transactionType.value === "Deposit") {
         deposit(loginName.value, Number.parseFloat(transactionAmount.value));
     } else if (transactionType.value === "Withdraw") {
@@ -182,9 +186,8 @@ function transactionLogin () {
     currentBalance.textContent = numberWithCommas(getBalance(loginName.value));
 }
 
-
+// shows input box when 'transfer' is selected
 function toggleTransferText() {
-    // Checks transaction type, shows input box when 'transfer' is selected
     if (transactionType.value === "Transfer") {
         transferInputText.style.display = "block";
     } else if (transactionType.value === "Withdraw") {
@@ -194,7 +197,9 @@ function toggleTransferText() {
     }
 }
 
-
+function numberWithCommas(amount) {
+    return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
 /*-------------------------get_balance (user)-----------------------------*/
 function getBalance (name) {
@@ -202,8 +207,8 @@ function getBalance (name) {
     return user.amount;
 }
 
-function numberWithCommas(amount) {
-    return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+
+
+
 
 console.log(accountHolders);
