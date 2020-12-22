@@ -3,25 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
     <section>
-        <h1 class="game--title">Tic Tac Toe</h1>
-        <div class="game--container">
-            <div data-cell-index="0" class="cell"></div>
-            <div data-cell-index="1" class="cell"></div>
-            <div data-cell-index="2" class="cell"></div>
-            <div data-cell-index="3" class="cell"></div>
-            <div data-cell-index="4" class="cell"></div>
-            <div data-cell-index="5" class="cell"></div>
-            <div data-cell-index="6" class="cell"></div>
-            <div data-cell-index="7" class="cell"></div>
-            <div data-cell-index="8" class="cell"></div>
+
+        <!-- GAME TITLE -->
+        <h1 class="title">TIC TAC TOE</h1>
+        <!-- end of GAME TITLE -->
+
+        <!-- GAME STATUS -->
+        <h2 class="game-status"></h2>
+        <!-- end of GAME STATUS -->
+
+        <!-- GAME CONTAINER -->
+        <div class="container">
+            <div index="0" class="box"></div>
+            <div index="1" class="box"></div>
+            <div index="2" class="box"></div>
+            <div index="3" class="box"></div>
+            <div index="4" class="box"></div>
+            <div index="5" class="box"></div>
+            <div index="6" class="box"></div>
+            <div index="7" class="box"></div>
+            <div index="8" class="box"></div>
         </div>
-        <h2 class="game--status"></h2>
-        <button class="game--restart">Restart Game</button>
+        <!-- end of GAME CONTAINER -->
+        
+        <!-- RESTART BUTTON -->
+        <button id="restart">RESTART</button>
+        <!-- end of RESTART BUTTON -->
+
     </section>
     
     <script src="script.js"></script>

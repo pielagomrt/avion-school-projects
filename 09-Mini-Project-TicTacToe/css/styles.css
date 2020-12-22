@@ -1,0 +1,74 @@
+/*----------------fonts----------------*/
+@font-face {
+  font-family: title;
+  src: url(fonts/title.ttf);
+}
+
+@font-face {
+  font-family: player;
+  src: url(fonts/player.ttf);
+}
+
+@font-face {
+  font-family: restart;
+  src: url(fonts/restart.ttf);
+}
+/*-------------end of fonts-------------*/
+
+body {
+  height: 100%;
+  background-color: #011c36;
+  text-align: center;
+}
+
+h1 {
+  color: rgb(243, 87, 87);
+  font-family: title;
+  font-size: 35px;
+}
+
+h2 {
+  color: whitesmoke;
+  font-family: player;
+  font-size: 45px;
+  font-weight: lighter;
+  margin-bottom: 33px;
+}
+
+button {
+  color: rgb(243, 87, 87);
+  font-family: restart;
+  font-size: 15px;
+  padding: 4px 25px;
+  background: transparent;
+  border: 3px solid rgb(243, 87, 87);
+  border-radius: 7px;
+  outline: none;
+  cursor: pointer;
+}
+
+button:hover {
+  color: white;
+  background-color: maroon;
+  border: 3px solid maroon;
+  transition: 150ms;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 25%;
+  margin: 30px auto 35px auto;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  margin: 2px auto;
+  font-size: 60px;
+  line-height: 100px;
+  background-color: #ddd;
+  border: 1.5px solid rgb(218, 114, 114);
+  border-radius: 5px;
+  cursor: pointer;
+}

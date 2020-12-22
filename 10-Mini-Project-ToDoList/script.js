@@ -40,11 +40,10 @@ function addItem() {
   span.className = "remove";
   let removeBtn = document.querySelectorAll(".remove");
   
-  for (let items of removeBtn) {
-    items.addEventListener('click', () => {
+  removeBtn.forEach(items => items.addEventListener('click', () => {
       let itemDiv = items.parentElement;
       itemDiv.style.display = 'none';
-  })};
+  }));
 }
 
 // crossing out an item on the list
