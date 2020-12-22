@@ -109,9 +109,7 @@ button:focus {
   padding: 10px 15px;
 }
 
-#name-btn:hover
-/* #name-btn:active,
-#name-btn:focus  */ {
+#name-btn:hover {
   background-color: navy;
   color: #74ebd5;
   cursor: pointer;

@@ -4,23 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <!-- CONTAINER -->
     <div class="container">
-        <div id="header">
-            <h1 id="date">Date: </h1>
+
+        <!-- DATE -->
+        <div id="header">     
+            <h1 id="date"></h1>
         </div>
+        <!-- end of DATE -->
+        
         <h2>To - Do List</h2>
-    
-        <div id="container">
-            <div id="inputContainer">
-                <input type="text" id="toDoInput" placeholder="Enter a task..." />
-                <div id="addButton"><span>ADD</span></div>
-            </div>
-            <div id="toDoContainer"></div>
+        
+        <!-- INPUT -->
+        <div id="input-container">
+            <input type="text" id="input" placeholder="Enter a task...">
+            <span id="addBtn">Add</span>
         </div>
+        <!-- end of INPUT -->
+
+        <!-- ITEMS -->
+        <ul></ul>
+        <!-- end of ITEMS -->
+
     </div>
-    <script type="text/javascript" src="script.js" async></script>
+    <!-- end of CONTAINER -->
+
+    <script src="script.js"></script>
 </body>
 </html>
