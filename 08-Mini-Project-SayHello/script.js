@@ -32,9 +32,12 @@ keys.addEventListener('click', e => {
         if (previousKeyType === 'name' || displayedText === input.value ) {
             display.textContent = `Hello, ${displayedText}!`;
             input.value = '';
+        } else if (previousKeyType === 'hey') {
+            display.textContent = `Hello, ${previousKeyType = 'name'}!`;
         } else {
             display.textContent = 0;
         }
+        greeting.dataset.previousKeyType = 'hey'
     }
 
     // -------------- SAY GOODBYE -------------- //
