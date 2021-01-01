@@ -16,6 +16,7 @@
 
 body {
   color: #555;
+  background-color: black;
   font-family: Open Sans;
   font-size: 16px;
   position: relative;
@@ -35,14 +36,33 @@ body {
   border: 1px solid #ff5049 !important;
 }
 
+@font-face {
+  font-family: numbers;
+  src: url(../css/font/numbers.ttf);
+}
+
+@font-face {
+  font-family: title;
+  src: url(../css/font/title.ttf);
+}
+
+@font-face {
+  font-family: headings;
+  src: url(../css/font/headings.ttf);
+}
+
 /**********************************************
 *** TOP PART
 **********************************************/
 
 .top {
-  height: 40vh;
+  height: 35%;
+  width: 60%;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 20px 20px 0 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
-    url("http://www.pamaciba.lv/wp-content/uploads/2014/09/ka-aprekinat-pvn.jpg");
+    url(../css/back.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -50,37 +70,87 @@ body {
 
 .budget {
   position: absolute;
-  width: 350px;
-  top: 50%;
+  width: 800px;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
 }
 
 .budget__title {
-  font-size: 18px;
   text-align: center;
-  margin-bottom: 10px;
   font-weight: 300;
+}
+
+.budget__title h1 {
+  font-size: 100px;
+  font-weight: lighter;
+  font-family: title;
+  padding: 0;
+  margin: 0;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #555;
+}
+
+.budget__title--month {
+  font-size: 30px;
+  font-family: headings;
+  text-transform: uppercase;
+}
+
+.budget__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.budget__total {
+  width: 400px;
+  text-align: center;
+  padding-top: 15px;
+  color: gray;
+  background-color: rgba(238, 231, 231, 0.8);
+  margin: 10px 20px;
+  margin-left: 50px;
+  margin-top: 12px;
+  border-radius: 5px;
+}
+
+.budget__subtotals {
+  padding: 0;
+  margin: 0 20px;
 }
 
 .budget__value {
   font-weight: 300;
   font-size: 46px;
   text-align: center;
-  margin-bottom: 25px;
-  letter-spacing: 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  letter-spacing: 4px;
+  border-radius: 10px;
+  font-family: numbers;
+  flex: 1;
 }
 
 .budget__income,
 .budget__expenses {
-  padding: 12px;
+  text-align: center;
+  padding: 15px;
+  padding-right: 0;
+  margin: 5px;
+  margin-right: 0;
   text-transform: uppercase;
+  border-radius: 5px;
+  width: 385px;
+  flex: 1;
 }
 
 .budget__income {
-  margin-bottom: 10px;
+  margin-right: 25px;
   background-color: #28b9b5;
+  margin-top: 15px;
+  margin-bottom: 12px;
 }
 
 .budget__expenses {
@@ -99,6 +169,8 @@ body {
 .budget__expenses--value {
   letter-spacing: 1px;
   float: left;
+  font-family: numbers;
+  letter-spacing: 4px;
 }
 
 .budget__income--percentage,
@@ -108,6 +180,8 @@ body {
   font-size: 11px;
   padding: 3px 0;
   margin-left: 10px;
+  margin-right: 10px;
+  font-family: numbers;
 }
 
 .budget__expenses--percentage {
@@ -121,12 +195,20 @@ body {
 *** BOTTOM PART
 **********************************************/
 
+.bottom {
+  padding-bottom: 15px;
+  margin: auto;
+  width: 60%;
+  background-color: white;
+  border-radius: 0 0 20px 20px;
+}
+
 /***** FORM *****/
 
 .add {
   padding: 14px;
   border-bottom: 1px solid #e7e7e7;
-  background-color: #f7f7f7;
+  background-color: rgb(183, 223, 219);
 }
 
 .add__container {
@@ -142,6 +224,7 @@ body {
   color: inherit;
   background-color: #fff;
   margin-right: 10px;
+  border-radius: 5px;
   font-weight: 300;
   transition: border 0.3s;
 }
@@ -160,23 +243,28 @@ body {
 }
 
 .add__description {
-  width: 400px;
+  width: 467px;
 }
 
 .add__value {
-  width: 100px;
+  width: 183px;
 }
 
 .add__btn {
   font-size: 35px;
   background: none;
   border: none;
-  color: #28b9b5;
+  color: #555;
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
   line-height: 1.1;
   margin-left: 10px;
+}
+
+.add__type {
+  padding: 7px;
+  width: 70px;
 }
 
 .add__btn:active {
@@ -197,19 +285,19 @@ body {
 /***** LISTS *****/
 
 .container {
-  width: 1000px;
-  margin: 60px auto;
+  width: 800px;
+  margin: 40px auto;
 }
 
 .income {
   float: left;
-  width: 475px;
-  margin-right: 50px;
+  width: 385px;
+  margin-right: 25px;
 }
 
 .expenses {
   float: left;
-  width: 475px;
+  width: 385px;
 }
 
 h2 {

@@ -1,25 +1,34 @@
 // BUDGET CONTROLLER
-var budgetController = (function() {
+var calculateFunction = (function() {
     
+    var data = {
+        allItems: {
+            exp: [],
+            inc: []
+        },
+        totals: {
+            exp: 0,
+            inc: 0
+        },
+        budget: 0,
+        percentage: -1
+    };
+
     var Expense = function(id, description, value) {
         this.id = id;
         this.description = description;
         this.value = value;
         this.percentage = -1;
-    };
-    
-    
-    Expense.prototype.calcPercentage = function(totalIncome) {
-        if (totalIncome > 0) {
-            this.percentage = Math.round((this.value / totalIncome) * 100);
-        } else {
-            this.percentage = -1;
-        }
-    };
-    
-    
-    Expense.prototype.getPercentage = function() {
-        return this.percentage;
+        this.calcPercentage = function(totalIncome) {
+            if (totalIncome > 0) {
+                this.percentage = Math.round((this.value / totalIncome) * 100);
+            } else {
+                this.percentage = -1;
+            }
+        };
+        this.getPercentage = function() {
+            return this.percentage;
+        };
     };
     
     
@@ -38,28 +47,10 @@ var budgetController = (function() {
         data.totals[type] = sum;
     };
     
-    
-    var data = {
-        allItems: {
-            exp: [],
-            inc: []
-        },
-        totals: {
-            exp: 0,
-            inc: 0
-        },
-        budget: 0,
-        percentage: -1
-    };
-    
-    
+      
     return {
-        addItem: function(type, des, val) {
+        addItem: function(type, description, value) {
             var newItem, ID;
-            
-            //[1 2 3 4 5], next ID = 6
-            //[1 2 4 6 8], next ID = 9
-            // ID = last ID + 1
             
             // Create new ID
             if (data.allItems[type].length > 0) {
@@ -70,9 +61,9 @@ var budgetController = (function() {
             
             // Create new item based on 'inc' or 'exp' type
             if (type === 'exp') {
-                newItem = new Expense(ID, des, val);
+                newItem = new Expense(ID, description, value);
             } else if (type === 'inc') {
-                newItem = new Income(ID, des, val);
+                newItem = new Income(ID, description, value);
             }
             
             // Push it into our data structure
@@ -85,11 +76,6 @@ var budgetController = (function() {
         
         deleteItem: function(type, id) {
             var ids, index;
-            
-            // id = 6
-            //data.allItems[type][id];
-            // ids = [1 2 4  8]
-            //index = 3
             
             ids = data.allItems[type].map(function(current) {
                 return current.id;
@@ -118,23 +104,10 @@ var budgetController = (function() {
                 data.percentage = Math.round((data.totals.exp / data.totals.inc) * 100);
             } else {
                 data.percentage = -1;
-            }            
-            
-            // Expense = 100 and income 300, spent 33.333% = 100/300 = 0.3333 * 100
+            }               
         },
         
         calculatePercentages: function() {
-            
-            /*
-            a=20
-            b=10
-            c=40
-            income = 100
-            a=20/100=20%
-            b=10/100=10%
-            c=40/100=40%
-            */
-            
             data.allItems.exp.forEach(function(cur) {
                cur.calcPercentage(data.totals.inc);
             });
@@ -157,10 +130,6 @@ var budgetController = (function() {
                 percentage: data.percentage
             };
         },
-        
-        testing: function() {
-            console.log(data);
-        }
     };
     
 })();
@@ -199,8 +168,8 @@ var UIController = (function() {
             2000 -> + 2,000.00
             */
 
-        num = Math.abs(num);
-        num = num.toFixed(2);
+        num = Math.abs(num); //returns the absolute value
+        num = num.toFixed(2); // two decimal places
 
         numSplit = num.split('.');
 
@@ -465,7 +434,7 @@ var controller = (function(budgetCtrl, UICtrl) {
         }
     };
     
-})(budgetController, UIController);
+})(calculateFunction, UIController);
 
 
 controller.init();
