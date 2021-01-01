@@ -1,11 +1,16 @@
 /**********************************************
 *** GENERAL
 **********************************************/
+@font-face {
+  font-family: main;
+  src: url(../css/font/main.ttf);
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: main;
 }
 
 .clearfix::after {
@@ -16,7 +21,6 @@
 
 body {
   color: #555;
-  background-color: black;
   font-family: Open Sans;
   font-size: 16px;
   position: relative;
@@ -37,18 +41,8 @@ body {
 }
 
 @font-face {
-  font-family: numbers;
-  src: url(../css/font/numbers.ttf);
-}
-
-@font-face {
   font-family: title;
   src: url(../css/font/title.ttf);
-}
-
-@font-face {
-  font-family: headings;
-  src: url(../css/font/headings.ttf);
 }
 
 /**********************************************
@@ -61,11 +55,12 @@ body {
   margin: auto;
   margin-top: 50px;
   border-radius: 20px 20px 0 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.37), rgba(0, 0, 0, 0.37)),
     url(../css/back.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
+  box-shadow: 0px -10px 30px 0px rgba(0, 0, 0, 0.2);
 }
 
 .budget {
@@ -83,18 +78,22 @@ body {
 }
 
 .budget__title h1 {
-  font-size: 100px;
+  font-size: 50px;
   font-weight: lighter;
   font-family: title;
   padding: 0;
   margin: 0;
+  margin-top: 20px;
+  margin-bottom: 10px;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #555;
 }
 
 .budget__title--month {
   font-size: 30px;
-  font-family: headings;
+  color: rgba(168, 247, 219, 0.687);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #555;
   text-transform: uppercase;
 }
 
@@ -109,7 +108,7 @@ body {
   text-align: center;
   padding-top: 15px;
   color: gray;
-  background-color: rgba(238, 231, 231, 0.8);
+  background-color: rgba(238, 231, 231, 0.87);
   margin: 10px 20px;
   margin-left: 50px;
   margin-top: 12px;
@@ -122,21 +121,22 @@ body {
 }
 
 .budget__value {
+  color: gray;
   font-weight: 300;
-  font-size: 46px;
+  font-size: 30px;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding-bottom: 4px;
   letter-spacing: 4px;
   border-radius: 10px;
-  font-family: numbers;
   flex: 1;
 }
 
 .budget__income,
 .budget__expenses {
   text-align: center;
-  padding: 15px;
+  padding: 13px;
   padding-right: 0;
   margin: 5px;
   margin-right: 0;
@@ -154,13 +154,13 @@ body {
 }
 
 .budget__expenses {
-  background-color: #ff5049;
+  background-color: #f5716d;
 }
 
 .budget__income--text,
 .budget__expenses--text {
   float: left;
-  font-size: 13px;
+  font-size: 17px;
   color: #444;
   margin-top: 2px;
 }
@@ -169,7 +169,6 @@ body {
 .budget__expenses--value {
   letter-spacing: 1px;
   float: left;
-  font-family: numbers;
   letter-spacing: 4px;
 }
 
@@ -181,7 +180,6 @@ body {
   padding: 3px 0;
   margin-left: 10px;
   margin-right: 10px;
-  font-family: numbers;
 }
 
 .budget__expenses--percentage {
@@ -201,6 +199,7 @@ body {
   width: 60%;
   background-color: white;
   border-radius: 0 0 20px 20px;
+  box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.2);
 }
 
 /***** FORM *****/
@@ -208,7 +207,7 @@ body {
 .add {
   padding: 14px;
   border-bottom: 1px solid #e7e7e7;
-  background-color: rgb(183, 223, 219);
+  background-color: rgb(211, 233, 232);
 }
 
 .add__container {
@@ -345,7 +344,7 @@ h2 {
   background-color: #ffdad9;
   padding: 3px;
   border-radius: 3px;
-  width: 32px;
+  width: 37px;
   text-align: center;
 }
 
@@ -357,7 +356,7 @@ h2 {
 .expenses .item__value,
 .expenses .item__percentage,
 .expenses .item__delete--btn {
-  color: #ff5049;
+  color: #ec6c67;
 }
 
 .item__delete {
