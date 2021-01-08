@@ -47,10 +47,10 @@ keys.addEventListener('click', e => {
             display.textContent = `Goodbye, ${displayedText}!`;
             input.value = '';
         } else if (previousKeyType === 'bye') {
-          const clearThis = document.querySelector('[data-action="goodbye"]')
-          clearThis.textContent = 'sG'
-          display.textContent = 0;
-    }
+            const clearThis = document.querySelector('[data-action="goodbye"]')
+            clearThis.textContent = 'sG'
+            display.textContent = 0;
+        }
         greeting.dataset.previousKeyType = 'bye'
   }
 

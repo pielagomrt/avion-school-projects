@@ -3,8 +3,8 @@ var calculateFunction = (function() {
     
     var data = {
         allItems: {
-            exp: [],
-            inc: []
+            exp: [], // expenses array
+            inc: []  // income array
         },
         totals: {
             exp: 0,
@@ -42,7 +42,7 @@ var calculateFunction = (function() {
     var calculateTotal = function(type) {
         var sum = 0;
         data.allItems[type].forEach(function(cur) {
-            sum += cur.value;
+            sum += cur.value; // accumulating for totals
         });
         data.totals[type] = sum;
     };
@@ -171,12 +171,15 @@ var UIController = (function() {
         num = Math.abs(num); //returns the absolute value
         num = num.toFixed(2); // two decimal places
 
-        numSplit = num.split('.');
+        numSplit = num.split('.'); // this will be separated by a "."
 
         int = numSplit[0];
         if (int.length > 3) {
             int = int.substr(0, int.length - 3) + ',' + int.substr(int.length - 3, 3); //input 23510, output 23,510
         }
+        // string.substr(x,y)
+        // x = particular place value
+        // y = count of digits from x
 
         dec = numSplit[1];
 
@@ -222,7 +225,7 @@ var UIController = (function() {
             newHtml = newHtml.replace('%value%', formatNumber(obj.value, type));
             
             // Insert the HTML into the DOM
-            document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
+            document.querySelector(element).insertAdjacentHTML('beforeend', newHtml); // 'beforeend' - just inside the element, after its last child.
         },
         
         
