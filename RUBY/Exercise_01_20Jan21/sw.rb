@@ -1,6 +1,7 @@
 #1 Use the each method of Array to iterate over [1,2,3,4,5,6,7,8,9,10] and print out each value.
 [1,2,3,4,5,6,7,8,9,10].each do |i|
-puts i end
+    puts i 
+end
 
 #2 Suppose you have hash h = {a:1, b:2, c:3, d:4}. (a) Get the value of key :b. (b) Add to this hash the key:value pair {e:5}.
 h = {a:1, b:2, c:3, d:4}
